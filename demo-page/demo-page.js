@@ -47,7 +47,7 @@ function initMap() {
   google.maps.event.addListener(map, 'mouseout', function(event) {
     this.setOptions({scrollwheel: false});
   });
-  // Click listener to center map
+  // Click listener to center map (DEPRECATED)
   // goCenterUI.addEventListener('click', function() {
   //   var newCenter = map.getCenter();
   //   control.setCenter(newCenter);
