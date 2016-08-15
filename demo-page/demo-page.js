@@ -48,10 +48,10 @@ function initMap() {
     this.setOptions({scrollwheel: false});
   });
   // Click listener to center map
-  goCenterUI.addEventListener('click', function() {
-    var newCenter = map.getCenter();
-    control.setCenter(newCenter);
-  });
+  // goCenterUI.addEventListener('click', function() {
+  //   var newCenter = map.getCenter();
+  //   control.setCenter(newCenter);
+  // });
   function CenterControl(controlDiv, map, center) {
     var control = this;
   }
