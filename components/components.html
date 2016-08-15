@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>buttons</title>
+  <link rel="stylesheet" href="../app/default.css">
+  <link rel="stylesheet" href="../app/color-palette.css">
+  <link rel="stylesheet" href="css/app-bar.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/inputs.css">
+  <link rel="stylesheet" href="css/nav-drawer.css">
+  <link rel="stylesheet" href="css/selection-controls.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script src="components.js" defer></script>
+</head>
+<body>
+
+<!-- app bar -->
+
+<nav class="app-bar js-app-bar is-open--mobile">
+  
+  <!-- buttons inline left -->
+  
+  <div class="buttons-inline--left js-buttons-inline--left">
+
+    <!-- navigation button & back button -->
+
+    <button class="btn--menu btn--icon js-menu-button">
+      <i class="material-icons dark">menu</i>
+    </button>
+    <button class="btn--back btn--icon">
+      <i class="material-icons dark">arrow_back</i>
+    </button>
+
+    <!-- app title and back text -->
+
+    <button class=" [ app-bar__title btn--flat  ] [ title ] ">toolbox</button>
+    <button class=" [ app-bar__title--back btn--flat ] [ title ] ">Back</button>
+    <span class=" [ app-bar__subheading app-bar__subheading--margin-right ] [ subheading ]">Home</span>
+
+  </div>
+  
+  <!-- app bar search -->
+
+  <div class="search js-search">
+    <div class="search__icon">
+      <i class="material-icons dark">search</i>
+    </div>
+    <input class="search-input primary-text js-search-input" type="search" placeholder="Search">
+  </div>
+ 
+  <!-- buttons inline right -->
+  
+  <div class="buttons-inline--right search__margin-spacer--right">
+    <button class="btn--search btn--icon js-btn--search">
+      <i class="material-icons dark">search</i>
+    </button>
+    <button class="btn--notifications btn--icon">
+      <i class="material-icons dark">notifications_none</i>
+    </button>
+    <button class="btn--profile btn--icon">
+      <i class="material-icons dark md-36">account_circle</i>
+    </button>
+  </div>
+  
+</nav>
+
+
+
+
+
+<!-- Navigation Drawer -->
+
+<nav class="drawer js-drawer">
+
+  <div class="drawer__title-bar js-drawer__title-bar">
+    <span class="title">toolbox</span>
+    <div class="btn--chevron--left">
+      <i class="material-icons dark">chevron_left</i>
+    </div>
+  </div>
+
+  <ul class="menu">
+    <li class="menu__item">
+      <i class="material-icons dark">home</i>
+      <span>Home</span>
+    </li>
+    <li class="menu__item">
+      <i class="material-icons dark">restaurant_menu</i>
+      <span>Food Menu</span>
+    </li>
+    <li class="menu__item">
+      <i class="material-icons dark">local_cafe</i>
+      <span>Our Coffee</span>
+    </li>
+    <li class="menu__item">
+      <i class="material-icons dark">place</i>
+      <span>Find Us</span>
+    </li>
+  </ul>
+
+</nav>
+<div class="js-drawer__transparency"></div>
+
+
+
+
+<!-- app container -->
+
+<div class="content js-content">
+
+  <div class="app-bar__spacer"></div>
+
+  <!-- search results -->
+
+ <div class="search__results"></div>
+
+  <!-- buttons -->
+
+  <div class="card">
+
+    <h3 class="headline">Buttons</h3>
+    
+    <!-- raised buttons -->
+
+    <h5 class="subheading">Raised buttons</h5>
+
+    <button class="btn--raised primary">BUTTON</button>
+    <button class="btn--raised accent primary-text--light">BUTTON</button>
+    <button class="btn--raised btn--raised--disabled">DISABLED</button>
+
+    <!-- flat buttons -->
+    
+    <h5 class="subheading">Flat buttons</h5>
+
+    <button class="btn--flat">BUTTON</button>
+    <button class="btn--flat accent-text">BUTTON</button>
+    <button class="btn--flat btn--flat--disabled">DISABLED</button>
+
+    <!-- floating buttons -->
+
+    <h5 class="subheading">Floating buttons</h5>
+
+    <button class="btn--fab primary">
+      <i class="material-icons dark">add</i>
+    </button>
+    <button class="btn--fab accent">
+      <i class="material-icons light">add</i>
+    </button>
+    <button class="btn--fab btn--fab--mini primary">
+      <i class="material-icons dark">add</i>
+    </button>
+    <button class="btn--fab btn--fab--mini accent">
+      <i class="material-icons light">add</i>
+    </button>
+
+    <!-- icon buttons -->
+
+    <h5 class="subheading">Icon buttons</h5>
+
+    <button class="btn--icon">
+      <i class="material-icons dark">menu</i>
+    </button>
+    <button class="btn--icon">
+      <i class="material-icons dark">search</i>
+    </button>
+    <button class="btn--icon">
+      <i class="material-icons dark">notifications</i>
+    </button>
+    <button class="btn--icon">
+      <i class="material-icons dark">more_vert</i>
+    </button>
+
+  </div>
+
+
+
+
+
+  <!-- text fields -->
+
+  <div class="card">
+
+    <h3 class="headline">Inputs</h3>
+
+    <!-- floating label text fields -->
+
+    <h5 class="subheading">Floating label text fields</h5>
+
+    <div class="text-field">
+      <input class="text-field__input text-field--floating-label" type="text" name="first" id="first" required>
+      <label class="text-field__label" for="first">First name</label>
+    </div>
+    <div class="text-field">
+      <input class="text-field__input text-field--floating-label" type="text" name="last" id="last" required>
+      <label class="text-field__label" for="last">Last name</label>
+    </div>
+    <div class="text-field">
+      <input class="text-field__input text-field--floating-label" type="text" name="address" id="address" required>
+      <label class="text-field__label" for="address">Address</label>
+    </div>
+    <div class="text-field">
+      <input class="text-field__input text-field--floating-label" type="text" name="address2" id="address2" required>
+      <label class="text-field__label" for="address2">Address 2</label>
+    </div>
+    <div class="text-field">
+      <input class="text-field__input text-field--floating-label" type="text" name="city" id="city" required>
+      <label class="text-field__label" for="city">City</label>
+    </div>
+
+    <!-- select menu -->
+
+    <div class="text-field">
+      <select class="text-field__input text-field--floating-label" name="state" id="state" required>
+         <option value="" disabled selected hidden></option>
+      </select>
+      <label class="text-field__label" for="state">State</label>
+      <i class="material-icons select_arrow">arrow_drop_down</i>
+    </div>
+
+    <div class="text-field">
+      <input class="text-field__input text-field--floating-label" type="text" name="zip" id="zip" required>
+      <label class="text-field__label" for="zip">Postal code</label>
+    </div>
+    <div class="text-field">
+      <textarea class="text-field__input text-field--floating-label" rows="4" cols="50" id="about" required></textarea>
+      <label class="text-field__label" for="about">About</label>
+    </div>
+
+    <!-- icon inputs -->
+
+    <h5 class="subheading">Icon inputs</h5>
+
+    <div class="icon-text-field">
+      <input class="text-field__input text-field__icon text-field--single" type="email" name="email" placeholder="Email">
+      <i class="material-icons dark">email</i>
+    </div>
+    <div class="icon-text-field">
+      <input class="text-field__input text-field__icon text-field--single" type="phone" name="phone" placeholder="Phone Number">
+      <i class="material-icons dark">phone</i>
+    </div>
+
+    <!-- date input -->
+
+    <h5 class="subheading">Date input</h5>
+
+    <time class="icon-text-field">
+      <input class="text-field__input date-input text-field__icon text-field--single" id="date" type="datetime-local">
+      <i class="material-icons dark">today</i>
+    </time>
+
+    <!-- color input -->
+
+    <h5 class="subheading">Color input</h5>
+
+    <input type="color">
+
+  </div>
+
+
+
+
+
+  <!-- selection controls -->
+
+  <div class="card">
+
+    <h3 class="headline">Selection controls</h3>
+
+    <!-- radios -->
+
+    <h5 class="subheading">Radios</h5>
+   
+    <div class="radio">
+      <input class="radio__input" id="apple" type="radio" name="fruit" value="apple" checked>
+      <label class="radio__label" for="apple">Apple</label>
+    </div>
+    <div class="radio">
+      <input class="radio__input" id="bananna" type="radio" name="fruit" value="bananna">
+      <label class="radio__label" for="bananna">Bananna</label>
+    </div>
+    <div class="radio">
+      <input class="radio__input" id="pear" type="radio" name="fruit" value="pear">
+      <label class="radio__label" for="pear">Pear</label>
+    </div>
+
+    <!-- icon radios -->
+
+    <h5 class="subheading">Icon Radios</h5>
+    
+    <div class="icon-radio-group">
+
+      <label class="icon-radio ripple" for="sentiment--very--dissatisfied">
+        <input class="icon-radio__input" id="sentiment--very--dissatisfied" type="radio" name="sentiment" value="very-dissatisfied">
+        <i class="icon-radio__label material-icons md-36 dark">sentiment_very_dissatisfied</i>
+      </label>
+      <label class="icon-radio ripple" for="sentiment--dissatisfied">
+        <input class="icon-radio__input" id="sentiment--dissatisfied" type="radio" name="sentiment" value="dissatisfied">
+        <i class="icon-radio__label material-icons md-36 dark">sentiment_dissatisfied</i>
+      </label>
+      <label class="icon-radio ripple" for="sentiment--neutral">
+        <input class="icon-radio__input" id="sentiment--neutral" type="radio" name="sentiment" value="neutral">
+        <i class="icon-radio__label material-icons md-36 dark">sentiment_neutral</i>
+      </label>
+      <label class="icon-radio ripple" for="sentiment--satisfied">
+        <input class="icon-radio__input" id="sentiment--satisfied" type="radio" name="sentiment" value="satisfied">
+        <i class="icon-radio__label material-icons md-36 dark">sentiment_satisfied</i>
+      </label>
+      <label class="icon-radio ripple" for="sentiment--very-satisfied">
+        <input class="icon-radio__input" id="sentiment--very-satisfied" type="radio" name="sentiment" value="very-satisfied">
+        <i class="icon-radio__label material-icons md-36 dark">sentiment_very_satisfied</i>
+      </label>
+
+    </div>
+
+    <!-- checkboxes -->
+
+    <h5 class="subheading">Checkbox</h5>
+
+    <div class="checkbox__group">
+      
+      <div class="checkbox">
+        <input class="checkbox__input" id="car" type="checkbox" name="vehicle" value="car" checked>
+        <label class="checkbox__label" for="car">Car</label>
+      </div>
+      <div class="checkbox">
+        <input class="checkbox__input" id="bike" type="checkbox" name="vehicle" value="bike">
+        <label class="checkbox__label" for="bike">Bike</label>
+      </div>
+      <div class="checkbox">
+        <input class="checkbox__input" id="train" type="checkbox" name="vehicle" value="train">
+        <label class="checkbox__label" for="train">Train</label>
+      </div>
+      
+    </div>
+
+  </div>
+
+
+
+
+
+  <!-- Dialogs -->
+
+  <div class="card">
+    <h3 class="headline">Dialogs</h3>
+  </div>
+
+
+</div>
+
+
+
+
+</body>
+</html>
+
+
+

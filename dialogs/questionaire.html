@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Questionaire</title>
+  <link rel="stylesheet" href="../app/default.css">
+  <link rel="stylesheet" href="../app/color-palette.css">
+  <link rel="stylesheet" href="../components/css/app-bar.css">
+  <link rel="stylesheet" href="../components/css/buttons.css">
+  <link rel="stylesheet" href="../components/css/inputs.css">
+  <link rel="stylesheet" href="../components/css/nav-drawer.css">
+  <link rel="stylesheet" href="../components/css/selection-controls.css">
+  <link rel="stylesheet" href="css/dialogs.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script src="js/dialogs.js" defer></script>
+</head>
+
+<body>
+
+<!-- dialog background -->
+
+<div class="questionaire-background">
+
+<!-- dialog -->
+
+<div class="questionaire-dialog card">
+
+  <h1 class="title">Order confirmed</h1>
+  <h2 class="subheading secondary-text">How did we do?</h2>
+
+  <!-- icon radios -->
+
+  <div class="questionaire__icons icon-radio-group">
+
+    <label class="icon-radio ripple" for="sentiment--very--dissatisfied">
+      <input class="icon-radio__input" id="sentiment--very--dissatisfied" type="radio" name="sentiment" value="very-dissatisfied">
+      <i class="icon-radio__label material-icons md-36 dark">sentiment_very_dissatisfied</i>
+    </label>
+    <label class="icon-radio ripple" for="sentiment--dissatisfied">
+      <input class="icon-radio__input" id="sentiment--dissatisfied" type="radio" name="sentiment" value="dissatisfied">
+      <i class="icon-radio__label material-icons md-36 dark">sentiment_dissatisfied</i>
+    </label>
+    <label class="icon-radio ripple" for="sentiment--neutral">
+      <input class="icon-radio__input" id="sentiment--neutral" type="radio" name="sentiment" value="neutral">
+      <i class="icon-radio__label material-icons md-36 dark">sentiment_neutral</i>
+    </label>
+    <label class="icon-radio ripple" for="sentiment--satisfied">
+      <input class="icon-radio__input" id="sentiment--satisfied" type="radio" name="sentiment" value="satisfied">
+      <i class="icon-radio__label material-icons md-36 dark">sentiment_satisfied</i>
+    </label>
+    <label class="icon-radio ripple" for="sentiment--very-satisfied">
+      <input class="icon-radio__input" id="sentiment--very-satisfied" type="radio" name="sentiment" value="very-satisfied">
+      <i class="icon-radio__label material-icons md-36 dark">sentiment_very_satisfied</i>
+    </label>
+
+  </div>
+
+  <!-- feedback -->
+
+  <div>
+    
+    <div class="comment-dropdown js-comment-dropdown">
+      <p class="body-2 accent-text">Comment</p>
+      <i class="material-icons accent-text">arrow_drop_down</i>
+    </div>
+    <div class="text-field comment-text js-comment-text">
+      <textarea class="text-field__input text-field--single" placeholder="Shoot us strait"></textarea>
+    </div>
+
+  </div>
+
+  <button class="btn--close btn--flat accent-text">CLOSE</button>
+
+</div>
+
+<!-- component scripts -->
+
+<script src="../components/components.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+/*------------------------------------*\
+  #PAGE-CONTENT
+\*------------------------------------*/
+
+/* app bar */
+.app-bar.app-bar--flex-end {
+  justify-content: flex-end;
+}
+
+/* layout */
+.demo-content {
+  position: relative;
+  overflow: auto;
+}
+.demo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2em;
+  min-height: calc(100vh - 56px);
+}
+.grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 0;
+  justify-content: space-around;
+  align-content: space-around;
+  max-width: 1000px;
+}
+.grid__menu-item.card {
+  padding: 0;
+}
+.grid__menu-item {
+  display: flex;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+.product-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+ }
+.order-btn-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto 16px 8px 11px;
+ }
+
+ /* product content */
+.menu-item__title {
+  margin: 16px 16px 8px;;
+}
+.menu-item__subheading {
+  margin: 0 16px;
+}
+.demo-section--find {
+  justify-content: space-around;
+ }
+.header--home,
+.header--find {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header--home__title {
+  margin: 48px 0 12px;
+  white-space: nowrap;
+}
+.header--home__subheading {
+  margin: 12px;
+}
+.header--food,
+.header--coffee {
+  margin: 0;
+}
+.header--find__subheading {
+  margin: .25rem;
+  text-align: center;
+}
+
+
+
+
+
+
+/*------------------------------------*\
+  #MAP-IMAGES
+\*------------------------------------*/
+
+.map__holder {
+  width: 60%;
+  padding-bottom: 35%;
+  position: relative;
+  margin: 3rem;
+}
+#map {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
+/*------------------------------------*\
+  #IMAGES
+\*------------------------------------*/
+
+img {
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  flex: none;
+}
+.grid__menu-item img {
+  height: 150px;
+  width: 100px;
+}
+@media screen and (min-width: 800px) {
+  .grid__menu-item img {
+    height: 120px;
+    width: 120px;
+  }
+}
+.img--hero {
+  max-width: 100%;
+  margin: 3rem 0;
+}
+.img--salad {
+  background-image: url("https://dl.dropboxusercontent.com/s/b8uj8rklggb0fdu/dinner.jpg?raw=1");
+}
+.img--eggs {
+  background-image: url("https://dl.dropboxusercontent.com/s/z1mrpsaciix51ka/eggs-bowl.jpg?raw=1");
+}
+.img--soup {
+  background-image: url("https://dl.dropboxusercontent.com/s/gpel75c1bpvy9fu/soup.jpg?raw=1");
+}
+.img--espresso {
+  background-image: url("https://dl.dropboxusercontent.com/s/3huj3iykfpyscqm/expresso.jpg?raw=1");
+}
+.img--cold {
+  background-image: url("https://dl.dropboxusercontent.com/s/ohljactzcxhhupu/Cold-Brew-Coffee-1.jpg?raw=1");
+}
+.img--latte {
+  background-image: url("https://dl.dropboxusercontent.com/s/scam9t8omcbohl8/latte.jpg?raw=1");
+}
+.img--tea {
+  background-image: url("https://dl.dropboxusercontent.com/s/on676uztrs0jhiy/tea-image.jpg?raw=1");
+}
+.img--pourover {
+  background-image: url("https://dl.dropboxusercontent.com/s/n3xmehtcjv1c6d9/pour-over.jpeg?raw=1");
+}
+.img--drip {
+  background-image: url("https://dl.dropboxusercontent.com/s/fvljp9opggcivbd/drip.jpeg?raw=1");
+}

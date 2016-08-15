@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,300');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+
+
+
+/*------------------------------------*\
+  #STYLE-DEFINITIONS
+\*------------------------------------*/
+
+:root {
+  font-family: var(--font-family);
+  --body-font-size: 14px;
+  --input-font-size: 16px;
+  --font-weight-regular: 400;
+  --font-family: 'Roboto', sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  min-width: 300px;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #LAYOUT
+\*------------------------------------*/
+
+.content {
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 600px) {
+  .content {
+    padding: 12px;
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+  #CARD
+\*------------------------------------*/
+
+.card {
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
+  border-radius: 0;
+  padding: 16px;
+  margin: 4px;
+}
+@media screen and (min-width: 600px) {
+  .card {
+    border-radius: 2px;
+    padding: 24px;
+    margin: 12px;
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+  #FONTS
+\*------------------------------------*/
+
+.display-4 {
+  font-size: 112px;
+}
+.display-3 {
+  font-size: 56px;
+}
+.display-2 {
+  font-size: 45px;
+}
+.display-1 {
+  font-size: 34px;
+}
+.headline {
+  font-size: 24px;
+}
+.title {
+  font-size: 20px;
+}
+.subheading {
+  font-size: 16px;
+}
+.body-2,
+.body-1,
+button,
+.menu {
+  font-size: 14px;
+}
+.caption {
+  font-size: 12px;
+}
+.display-4,
+.display-3,
+.display-2,
+.display-1,
+.headline,
+.subheading,
+.body-1,
+.caption {
+  font-weight: 400;
+}
+.title,
+.body-2,
+button {
+  font-weight: 500;
+}
+.bold {
+  font-weight: 700;
+}
+.display-4,
+.display-3,
+.display-2,
+.display-1,
+.caption {
+  color: rgba(0,0,0,.54);
+}
+.headline,
+.title,
+.subheading,
+.body-2,
+.body-1,
+.menu,
+button {
+  color: rgba(0,0,0,.87);
+}
+button {
+  font-family: var(--font-family);
+}
+/* adjust font size for desktop */
+@media screen and (min-width: 600px) {
+  .subheading {
+    font-size: 15px;
+  }
+  .body-2 {
+    font-size: 13px;
+  }
+  .body-1 {
+    font-size: 13px;
+  }
+}
+/*h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}*/
+a { text-decoration: none; }
+li { list-style: none; }
+
+

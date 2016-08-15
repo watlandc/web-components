@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Color Picker</title>
+  <link rel="stylesheet" href="../app/default.css">
+  <link rel="stylesheet" href="../app/color-palette.css">
+  <link rel="stylesheet" href="../components/css/app-bar.css">
+  <link rel="stylesheet" href="../components/css/buttons.css">
+  <link rel="stylesheet" href="../components/css/inputs.css">
+  <link rel="stylesheet" href="../components/css/nav-drawer.css">
+  <link rel="stylesheet" href="../components/css/selection-controls.css">
+  <link rel="stylesheet" href="css/dialogs.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script src="js/dialogs.js" defer></script>
+</head>
+
+<body>
+
+<div class="color-picker-background">
+
+  <div class="color-picker-dialog card">
+
+    <div class="color-picker__header">
+      <h1 class="color-picker__title title">Color Picker</h1>
+      <div class="color-display"></div>
+    </div>
+
+    <!-- color picker -->
+
+    <form class="color-picker-group">
+
+      <div class="color-picker">
+        <span class="color-picker__label subheading">R</span>
+        <input class="color-picker__input" type="range" name="color" min="0" max="255">
+      </div>
+      <div class="color-picker">
+        <span class="color-picker__label subheading">G</span>
+        <input class="color-picker__input" type="range" name="color" min="0" max="255" step="5">
+      </div>
+      <div class="color-picker">
+        <span class="color-picker__label subheading">B</span>
+        <input class="color-picker__input" type="range" name="color" min="0" max="255" step="5">
+      </div>
+      <div class="color-picker">
+        <span class="color-picker__label subheading">A</span>
+        <input class="color-picker__input" type="range" name="color" min="0" max="1" step="0.01">
+      </div>
+
+    </form>
+
+    <!-- inline buttons -->
+
+    <div class="btn--inline-buttons">
+      <button class="btn--flat">CANCEL</button>
+      <button class="btn--flat accent-text">SAVE</button>
+    </div>
+
+
+  </div>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+/*------------------------------------*\
+  #RESETS
+\*------------------------------------*/
+
+:root {
+  background-color: #fafafa;
+  color: rgba(0, 0, 0, 0.87);
+
+  /* app bar color when searching */
+  --app-bar--search: #f5f5f5;
+  --app-bar--edit: #dcedc8;
+  /* color scheme */
+  --accent: #8bc34a;
+  --accent--dark: #689f38;
+  --divider: rgba(0, 0, 0, 0.12);
+  --primary-text: rgba(0, 0, 0, .87);
+  --secondary-text: rgba(0, 0, 0, .54);
+  --inactive-text: rgba(0, 0, 0, .38);
+  --secondary-text--light: rgba(255, 255, 255, .7);
+  --inactive: #bdbdbd;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #COLOR_SCHEME
+\*------------------------------------*/
+
+/* primary palette */
+.primary { background-color: #ffffff; }
+/* .primary--light {} not used */
+/* .primary--dark {}  not used */
+
+/* secondary palette */
+.accent { background-color: #8bc34a; }
+.accent--light { background-color: #DCEDC8; } /* 100 */
+.accent--dark { background-color: #689F38; } /* 700 */
+
+/* warning */
+.warn { background-color: #f44336; }
+.inactive { background-color: #00001a; }
+
+
+
+
+
+
+/*------------------------------------*\
+  #TEXT-AND-BACKGROUND-COLORS
+\*------------------------------------*/
+
+/* dark text on light backgrounds */
+.primary-text { color: rgba(0, 0, 0, .87); }
+.secondary-text { color: rgba(0,  0, 0, .54); }
+.inactive-text { color: rgba(0, 0, 0, .38); } /* disabled text, hints, icons */
+.divider { color: rgba(0, 0, 0, .12); }
+.accent-text { color: #8bc34a; }
+
+/* white text on dark backgrounds */
+.primary-text--light { color: rgba(255, 255, 255, 1); }
+.secondary-text--light { color: rgba(255, 255, 255, .7); }
+.inactive-text--light { color: rgba(255, 255, 255, .5); } /* disabled text, hints, icons */
+.divider--light { color: rgba(255, 255, 255, .12); }
+
+/* search */
+.search {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+/* search placholder text */
+.search-input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, .54);
+}
+.search-input::-moz-placeholder {
+  color: rgba(0, 0, 0, .54);
+}
+.search-input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, .54);
+}
+
+
+
+
+/*------------------------------------*\
+  #THEMES
+\*------------------------------------*/
+
+/* light theme */
+.status-bar { background-color: #e0e0e0; }
+.app-bar { background-color: #f5f5f5; }
+.background { background-color: #fafafa; }
+.card { background-color: #ffffff; }
+
+/* dark theme */
+.status-bar--dark { background-color: #000000; }
+.app-bar--dark { background-color: #212121; }
+.background--dark { background-color: #303030; }
+.card--dark { background-color: #424242; }
+
+
+
+
+
+/*------------------------------------*\
+  #ICONS
+\*------------------------------------*/
+
+/* color style for css only buttons */
+
+/*button.dark {
+  color: rgba(0, 0, 0, 0.54);
+}*/
+
+/* icon color config */
+.material-icons.dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.dark.inactive { color: rgba(0, 0, 0, 0.26); }
+
+.material-icons.light { color: rgba(255, 255, 255, 1); }
+.material-icons.light.inactive { color: rgba(255, 255, 255, 0.3); }
+
+/* icon size */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+/* align icon centered */
+i {
+  vertical-align: middle;
+}
+
+

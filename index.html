@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bucktown Cafe</title>
+  <link rel="stylesheet" href="../app/default.css">
+  <link rel="stylesheet" href="../app/color-palette.css">
+  <link rel="stylesheet" href="../components/css/app-bar.css">
+  <link rel="stylesheet" href="../components/css/buttons.css">
+  <link rel="stylesheet" href="../components/css/inputs.css">
+  <link rel="stylesheet" href="../components/css/nav-drawer.css">
+  <link rel="stylesheet" href="../components/css/selection-controls.css">
+  <link rel="stylesheet" href="demo-page/demo-page.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+  <script src="demo-page/demo-page.js" defer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+</head>
+<body class="js-scroll"> 
+
+
+
+<!-- app bar -->
+
+<div class="app-bar app-bar--flex-end">
+
+  <!-- buttons inline right -->
+
+  <div class="buttons-inline--right">
+
+    <a href="dialogs/about.html">
+      <button class="btn--flat secondary-text">ABOUT</button>
+    </a>
+    
+    <button class="btn--icon">
+      <i class="material-icons dark">shopping_cart</i>
+    </button>
+
+  </div>
+
+</div>
+
+<!-- main content -->
+
+<div class="demo-content">
+  
+  <!-- app bar spacer -->
+  
+  <div class="app-bar__spacer"></div>
+  
+  <!-- section container -->
+  
+  <div class="demo-content">
+
+    <!-- home -->
+
+    <section class="demo-section demo-section--home">
+
+      <div class="header--home">
+        <h1 class="header--home__title display-2">bucktown diner</h1>
+        <h3 class="header--home__subheading display-1">fresh, local, fast food</h3>
+      </div>
+
+      <img class="img--hero" src="https://dl.dropboxusercontent.com/s/0qbgirz2f3itfqr/food-drink.jpg?raw=1" width="640"/>
+
+      <button class="js-btn--keyboard-arrow-down btn--fab accent">
+        <i class="material-icons light">keyboard_arrow_down</i>
+      </button>
+
+    </section>
+
+
+    <!--food menu-->
+ 
+    <section class="demo-section demo-section--food">
+
+      <h3 class="header--food title">Lunch daily 11AM - 6PM</h3>
+
+      <!-- product grid -->
+
+      <ul class="grid">
+
+        <li class="grid__menu-item card">
+          <img class="img--soup"/>
+          <div class="product-info">
+            <h3 class="menu-item__title subheading">Potato Leek Soup</h3>
+            <p class="menu-item__subheading body-1">Leek soup is soup based on potatos, leek, broth, and cream.</p>
+            <div class="order-btn-row">
+              <button class="btn--order btn--flat accent-text">ORDER NOW</button>
+              <span class="subheading">$10</span>
+            </div>
+          </div>
+        </li>
+        <li class="grid__menu-item card">
+          <img class="img--eggs"/>
+          <div class="product-info">
+            <h3 class="menu-item__title subheading">Mushroom Casserole</h3>
+            <p class="menu-item__subheading body-1">A combination of spinach aand mushrooms.</p>
+            <div class="order-btn-row">
+              <button class="btn--order btn--flat accent-text">ORDER NOW</button>
+              <span class="subheading">$10</span>
+            </div>
+          </div>
+        </li>
+        <li class="grid__menu-item card">
+          <img class="img--salad"/>
+          <div class="product-info">
+            <h3 class="menu-item__title subheading">Salmon Salad</h3>
+            <p class="menu-item__subheading body-1">Salad topped with a vinaigrette sauce.</p>
+            <div class="order-btn-row">
+              <button class="btn--order btn--flat accent-text">ORDER NOW</button>
+              <span class="subheading">$10</span>
+            </div>
+          </div>
+        </li>
+        <li class="grid__menu-item card">
+          <img class="img--soup"/>
+          <div class="product-info">
+            <h3 class="menu-item__title subheading">Potato Leek Soup</h3>
+            <p class="menu-item__subheading body-1">Leek soup is soup based on potatos, leek, broth, and cream.</p>
+            <div class="order-btn-row">
+              <button class="btn--order btn--flat accent-text">ORDER NOW</button>
+              <span class="subheading">$10</span>
+            </div>
+          </div>
+        </li>
+        <li class="grid__menu-item card">
+          <img class="img--eggs"/>
+          <div class="product-info">
+            <h3 class="menu-item__title subheading">Mushroom Casserole</h3>
+            <p class="menu-item__subheading body-1">A combination of spinach aand mushrooms.</p>
+            <div class="order-btn-row">
+              <button class="btn--order btn--flat accent-text">ORDER NOW</button>
+              <span class="subheading">$10</span>
+            </div>
+          </div>
+        </li> 
+        <li class="grid__menu-item card">
+          <img class="img--salad"/>
+          <div class="product-info">
+            <h3 class="menu-item__title subheading">Salmon Salad</h3>
+            <p class="menu-item__subheading body-1">Salad topped with a vinaigrette sauce.</p>
+            <div class="order-btn-row">
+              <button class="btn--order btn--flat accent-text">ORDER NOW</button>
+              <span class="subheading">$10</span>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+
+      <!-- grid spacer -->
+
+      <div></div>
+
+    </section>
+ 
+    <!-- coffee & tea -->
+
+    <section class="demo-section demo-section--drinks">
+
+      <h3 class="title">Coffee & Tea</h3>
+
+      <!-- product grid -->
+
+      <ul class="grid">
+
+        <li class="grid__menu-item card">
+          <img class="img--drip"/>
+          <div class="product-info">
+            <h3 class="menu-item__title subheading">Drip Coffee</h3>
+            <p class="menu-item__subheading body-1">Fresh cup o' joe</p>
+            <div class="order-btn-row">
+              <button class="btn--order btn--flat accent-text">ORDER NOW</button>
+              <span class="subheading">$10</span>
+            </div>
+          </div>
+        </li>
+        <li class="grid__menu-item card">
+          <img class="img--pourover"/>
+          <div class="product-info">
+            <h3 class="menu-item__title subheading">Pour Over</h3>
+            <p class="menu-item__subheading body-1">Individually brewed cups</p>
+            <div class="order-btn-row">
+              <button class="btn--order btn--flat accent-text">ORDER NOW</button>
+              <span class="subheading">$10</span>
+            </div>
+          </div>
+        </li>
+        <li class="grid__menu-item card">
+          <img class="img--cold"/>
+          <div class="product-info">
+            <h3 class="menu-item__title subheading">Cold Brew</h3>
+            <p class="menu-item__subheading body-1">Ice coffee</p>
+            <div class="order-btn-row">
+              <button class="btn--order btn--flat accent-text">ORDER NOW</button>
+              <span class="subheading">$10</span>
+            </div>
+          </div>
+        </li>
+        <li class="grid__menu-item card">
+          <img class="img--latte"/>
+          <div class="product-info">
+            <h3 class="menu-item__title subheading">Latte</h3>
+            <p class="menu-item__subheading body-1">Espresso + steamed milk</p>
+            <div class="order-btn-row">
+              <button class="btn--order btn--flat accent-text">ORDER NOW</button>
+              <span class="subheading">$10</span>
+            </div>
+          </div>
+        </li>
+        <li class="grid__menu-item card">
+          <img class="img--espresso"/>
+          <div class="product-info">
+            <h3 class="menu-item__title subheading">Espresso</h3>
+            <p class="menu-item__subheading body-1">Espresso</p>
+            <div class="order-btn-row">
+              <button class="btn--order btn--flat accent-text">ORDER NOW</button>
+              <span class="subheading">$10</span>
+            </div>
+          </div>
+        </li> 
+        <li class="grid__menu-item card">
+          <img class="img--tea"/>
+          <div class="product-info">
+            <h3 class="menu-item__title subheading">Tea</h3>
+            <p class="menu-item__subheading body-1">A selection of loose leaf teas -hot, iced or latte</p>
+            <div class="order-btn-row">
+              <button class="btn--order btn--flat accent-text">ORDER NOW</button>
+              <span class="subheading">$10</span>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+
+      <!-- grid spacer -->
+
+      <div></div>
+
+    </section>
+
+    <!-- find us -->
+
+    <section class="demo-section demo-section--find">
+
+      <!-- address -->
+
+      <div class="header--find">
+        <h3 class="header--coffee title">Bucktown, Chicago</h3>
+        <span class="header--find__subheading">555 North Ave. Chicago, IL. 60647</span>
+        <span class="header--find__subheading">Open daily 7am - 7pm</span>
+      </div>
+
+      <!-- map -->
+
+      <div class="map__holder">
+        <div id="map"></div>
+      </div>
+
+      <!-- back button -->
+
+      <button class="js-btn--keyboard-arrow-up btn--fab accent">
+        <i class="material-icons light">keyboard_arrow_up</i>
+      </button>
+
+    </section>
+
+  </div>
+  
+</div>
+
+</body>
+</html>

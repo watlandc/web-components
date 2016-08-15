@@ -1,0 +1,125 @@
+/*------------------------------------*\
+  #RADIOS
+\*------------------------------------*/
+
+.radio,
+.checkbox {
+  position: relative;
+  padding-bottom: 16px;
+}
+.radio__input,
+.checkbox__input {
+  visibility: hidden;
+  width: 20px;
+  height: 20px;
+  padding: 8px 0 8px 0;
+  margin: 0;
+}
+.radio__input + .radio__label,
+.checkbox__input + .checkbox__label {
+  display: inline-block;
+  padding-left: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.radio__input + .radio__label::before,
+.radio__input + .radio__label::after,
+.checkbox__input + .checkbox__label::before,
+.checkbox__input + .checkbox__label::after {
+  content: "";
+  box-sizing: border-box;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* input states */
+.radio__input + .radio__label::before {
+  border: 2px solid var(--secondary-text);
+  border-radius: 50%;
+}
+.radio__input + .radio__label::after {
+  border-radius: 50%;
+  background-color: var(--accent);
+  transition: transform ease .28s;
+  transform: scale(0);
+}
+.radio__input:checked + .radio__label::before {
+  border-color: var(--accent);
+  transition: border-color ease .28s;
+}
+.radio__input:checked + .radio__label::after {
+  transform: scale(.5);
+}
+
+
+
+
+
+/*------------------------------------*\
+  #CHECKBOXES
+\*------------------------------------*/
+
+.checkbox__input + .checkbox__label::before {
+  border-radius: 2px;
+  border: 2px solid var(--secondary-text);
+  transition: 240ms;
+}
+.checkbox__input + .checkbox__label::after {
+  border-radius: 2px;
+}
+.checkbox__input:checked + .checkbox__label::before {
+  background-color: var(--accent);
+  border: none;
+  transition: 240ms;
+}
+.checkbox__input:checked + .checkbox__label::after {
+  content: "";
+  width: 6.67px;
+  height: 13.33px;
+  border: 2px solid var(--secondary-text--light);
+  transform: rotate(45deg);
+  border-top: 0;
+  border-left: 0;
+  left: 6.67px;
+  top: 2.22px;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #ICON-RADIOS
+\*------------------------------------*/
+
+.icon-radio-group {
+  margin: 0 0 16px 0;
+}
+.icon-radio {
+  display: inline-block;
+  position: relative; 
+  margin: 0 6px;
+  border-radius: 50%;
+}
+/* hide default input */
+.icon-radio__input {
+  display: none;
+}
+/* position icon above touch target */
+.icon-radio__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 8px;
+}
+.icon-radio__label {
+  pointer-events: none;
+}
+/* apply color on check */
+.icon-radio__input:checked + .icon-radio__label {
+  color: var(--accent) !important;
+  transition: .25s;
+}

@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+}
+#calculator {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+  border: 20px solid #666;
+}
+.row {
+  display: flex;
+  flex: 1;
+}
+.row div {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+p, span {
+  font-size: 10vmin;
+  color: #666;
+}
+#display {
+  background-color: #ccc;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10%;
+}

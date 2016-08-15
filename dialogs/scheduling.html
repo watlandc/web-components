@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scheduling</title>
+  <link rel="stylesheet" href="../app/default.css">
+  <link rel="stylesheet" href="../app/color-palette.css">
+  <link rel="stylesheet" href="../components/css/app-bar.css">
+  <link rel="stylesheet" href="../components/css/buttons.css">
+  <link rel="stylesheet" href="../components/css/inputs.css">
+  <link rel="stylesheet" href="../components/css/nav-drawer.css">
+  <link rel="stylesheet" href="../components/css/selection-controls.css">
+  <link rel="stylesheet" href="css/dialogs.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script src="js/dialogs.js" defer></script>
+</head>
+
+<body>
+
+<div class="scheduling-background">
+
+  <div class="scheduling-dialog card">
+
+    <h1 class="scheduler__title title">Pickup Time</h1>
+
+    <!-- date & time input -->
+
+    <div class="scheduler icon-text-field">
+      <input class="date-input text-field__input text-field__icon text-field--single" id="date" type="datetime-local">
+      <i class="material-icons dark">today</i>
+    </div>
+
+    <!-- comment -->
+
+    <div class="scheduler__comment icon-text-field">
+      <textarea class="text-field__input text-field__icon text-field--single" type="text" placeholder="Special instructions"></textarea>
+      <i class="material-icons dark">chat</i>
+    </div>
+
+    <!-- inline buttons -->
+
+    <div class="btn--inline-buttons">
+      <button class="btn--flat">CANCEL</button>
+      <button class="btn--flat accent-text">SAVE</button>
+    </div>
+
+
+
+  </div>
+
+</div>
+
+</body>
+
+</html>

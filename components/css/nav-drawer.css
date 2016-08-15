@@ -1,0 +1,122 @@
+/*------------------------------------*\
+  #PERSISTENT-NAVIGATION-DRAWER-DESKTOP
+\*------------------------------------*/
+
+.drawer {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 210px;
+  height: 100%;
+  /* -1 since the app bar and drawer are in different stacking contexts */
+  z-index: -1;
+  background-color: #fafafa;
+}
+.menu {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.drawer .menu {
+  position: absolute;
+  font-weight: 500;
+  padding-left: 24px;
+  margin-top: 8px;
+}
+.drawer .menu span {
+  padding-left: 32px;
+  white-space: nowrap;
+}
+.menu__item {
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+/* lock open on desktop > 865 */
+@media screen and (min-width: 750px) {
+  .drawer {
+    transition: transform .2s;
+    transform: translateX(0);
+  }
+  .content {
+    margin-left: 210px;
+    transition: margin-left .2s;
+  }
+}
+/* close persistent drawer on mobile */
+@media screen and (max-width: 750px) {
+  .drawer {
+    transition: transform .2s;
+    transform: translateX(-100%);
+  }
+  .content {
+    margin-left: 0px;
+    transition: margin-left .2s;
+  }
+} 
+
+
+
+
+/*------------------------------------*\
+  #TEMPORARY-NAVIGATION-DRAWER-MOBILE-TABLET
+\*------------------------------------*/
+
+.drawer__title-bar {
+  height: 56px;
+  padding-left: 24px;
+  padding-right: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (min-width: 600px) {
+  .drawer__title-bar {
+    height: 64px;
+  }
+}
+/* open temporary drawer on mobile < 750px */
+.drawer.is-open--mobile {
+  transform: translateX(0);
+  transition: transform .2s;
+  background-color: #ffffff;
+  z-index: 16;
+  width: 300px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+/* close temporary drawer */
+.drawer.is-closed--mobile {
+  transition: transform .2s;
+  transform: translateX(-100%);
+  animation-name: color;
+  animation-duration: .4s;
+}
+/* close persistent drawer when open */
+.drawer.is-closed--desktop {
+  transition: transform .2s;
+  transform: translateX(-100%);
+}
+.content.is-no-margin {
+  margin-left: 0 !important;
+}
+.drawer__transparency {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,.20);
+  z-index: 15;
+}
+ /* transition from temporary drawer to persistent drawer */
+@keyframes color {
+  from {
+    z-index: 16;
+  }
+  to {
+    z-index: 1;
+  }
+}
+

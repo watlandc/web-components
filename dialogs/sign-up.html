@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign up</title>
+  <link rel="stylesheet" href="../app/default.css">
+  <link rel="stylesheet" href="../app/color-palette.css">
+  <link rel="stylesheet" href="../components/css/app-bar.css">
+  <link rel="stylesheet" href="../components/css/buttons.css">
+  <link rel="stylesheet" href="../components/css/inputs.css">
+  <link rel="stylesheet" href="../components/css/nav-drawer.css">
+  <link rel="stylesheet" href="../components/css/selection-controls.css">
+  <link rel="stylesheet" href="css/dialogs.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script src="../components/components.js" defer></script>
+</head>
+<body>
+
+<!-- background -->
+
+<div class="signup-background">
+
+  <!-- main content -->
+
+  <main class="signup-dialog">
+
+    <!-- phone image -->
+
+    <section class="phone-images">
+
+      <div class="iphone">
+        <img class="iphone--1" src="">
+      </div>
+
+    </section>
+
+    <!-- sign up dialog -->
+
+    <section class="signup">
+
+      <!-- registration -->
+
+      <div class="registration card">
+
+        <h1 class="signup__title display-2 primary-text">toolbox</h1>
+        <h2 class="signup__subheading subheading secondary-text">Sign up for faster checkout</h2>
+
+        <!-- social sign on -->
+        
+        <button class="btn--google btn--raised accent primary-text--light">
+          <div class="google-logo">
+            <div class="google-logo__icon"></div>
+          </div>
+          <span class="btn--google__text">SIGN IN WITH GOOGLE</span>
+        </button>
+
+        <!-- divider -->
+
+        <div class="registration__divider">
+          <div class="divider"></div>
+          <div class="divider__text subheading secondary-text">OR</div>
+          <div class="divider"></div>
+        </div>
+
+        <!-- sign up form -->
+
+        <form action="">
+
+          <div class="text-field">
+            <input class="text-field__input text-field--floating-label" type="text" name="full-name" id="full-name" required>
+            <label class="text-field__label" for="full-name">Full name</label>
+          </div>
+          <div class="text-field">
+            <input class="text-field__input text-field--floating-label" type="text" name="email" id="email" required>
+            <label class="text-field__label" for="email">Email</label>
+          </div>
+          <div class="text-field"> 
+            <input class="text-field__input text-field--floating-label" type="text" name="password" id="password" required>
+            <label class="text-field__label" for="password">Password</label>
+          </div>
+
+        </form>
+
+        <button class="btn--signup btn--raised accent primary-text--light">SIGN UP</button>
+
+        <!-- site terms -->
+
+        <p class="terms body-1 secondary-text">By signing up, you agree to our <a class="body-2 secondary-text" href="">Terms</a> and <a class="body-2 secondary-text" href="">Privacy Policy</a>.</p>
+
+      </div>
+
+      <!-- login -->
+
+      <div class="login-card card">
+        <p class="login-card__text body-1">Have an account? <a class="body-2 accent-text" href="">Log in</a></p>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- footer -->
+
+  <footer class="footer">
+
+    <!-- footer links -->
+
+    <nav class="footer-navigation">
+
+      <ul class="footer__menu">
+        <li class="menu__item">
+          <a class="body-1 secondary-text" href="">About Bucktown Cafe</a>
+        </li>
+        <li class="footer__menu__divider"></li>
+        <li class="menu__item">
+          <a class="body-1 secondary-text" href="">Terms & Privacy</a>
+        </li>
+      </ul>
+
+    </nav>
+
+  </footer>
+
+</div>
+
+</body> 
+
+</html>

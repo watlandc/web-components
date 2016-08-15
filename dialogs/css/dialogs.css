@@ -1,0 +1,464 @@
+/*------------------------------------*\
+  #ABOUT
+\*------------------------------------*/
+
+/* background */
+.about-transparency {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgba(0,0,0,.2);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 250px 0; /* vertical window resize adjustment */
+}
+/* about dialog */
+.about {
+  flex: 1;
+  max-width: 414px;
+  margin: 0 auto;
+}
+  /* about image holder */
+  .about__image-holder {
+    position: relative;
+    top: 0;
+    height: 70px;
+  }
+  .about__profile-image {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    transform: translateY(-70px);
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    background: url(https://dl.dropboxusercontent.com/s/po469fxcme99fu5/profile-image.jpg?raw=1) no-repeat;
+    background-size: cover;
+  }
+  /* about header card */
+  .about__header {
+    background-color: var(--accent);
+  }
+  .about__header.card {
+    padding: 0;
+    margin: 0;
+  }
+  .about__title {
+    padding: 16px 16px 0;
+    text-align: center;
+  }
+  .about__subheading {
+    padding: 16px 16px 24px;
+    text-align: center;
+  }
+  /* about main card */
+  .about__main.card {
+    margin: 8px;
+  }
+  @media screen and (min-width: 414px) {
+    .about__main.card {
+      margin: 8px 0;
+    }
+  }
+
+.list-item {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+}
+  .list-item__icon {
+    width: 24px;
+    margin-right: 20px;
+  }
+
+.about__website {
+  margin-top: 24px;
+}
+.web-resource {
+  display: inline;
+}
+  .web-resource__link{
+    display: block;
+    text-decoration: none;
+  }
+
+
+
+
+/*------------------------------------*\
+  #COLOR-PICKER
+\*------------------------------------*/
+
+.color-picker-background {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.color-picker-dialog {
+  flex: 1;
+  max-width: 350px;
+}
+.color-picker__title {
+  margin: 0;
+}
+.color-picker__header {
+  display: flex;
+  margin: 0 0 24px;
+}
+.color-display {
+  height: 24px;
+  width: 24px;
+  border: 1px solid #000000;
+  margin-left: 20px;
+}
+.color-picker-group {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #LOGIN
+\*------------------------------------*/
+
+.login-background {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-dialog {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 350px;
+}
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.forgot-password {
+  align-self: flex-end;
+}
+.login__title {
+  align-self: center;
+  margin: 8px 0 16px;
+}
+.btn--login {
+  margin: 16px 0;
+}
+.signup-prompt {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+.signup-prompt__text {
+  margin: 0;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #QUESTIONAIRE
+\*------------------------------------*/
+
+.questionaire-background {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.questionaire-dialog {
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  flex: 1;
+}
+.questionaire__icons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+.comment-dropdown {
+  display: flex;
+  align-items: center;
+}
+.comment-text {
+  display: none;
+}
+.comment-text.is-visible {
+  display: block;
+}
+.btn--close {
+  align-self: flex-end;
+}
+
+
+
+  
+
+/*------------------------------------*\
+  #SCHEDULING
+\*------------------------------------*/
+
+.scheduling-background {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scheduling-dialog {
+  flex: 1;
+  max-width: 350px;
+}
+.scheduler__title {
+  margin: 0 0 24px;
+}
+
+
+
+
+
+
+/*------------------------------------*\
+  #SHIPPING
+\*------------------------------------*/
+
+/* page styles */
+.checkout-background {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;*/
+}
+.checkout-dialog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin: 50px 0;
+}
+@media screen and (min-width: 800px) {
+  .checkout-dialog {
+    flex-direction: row;
+    align-items: flex-start;
+
+  }
+}
+/* checkout section */
+.checkout-details {
+  flex: 1;
+  max-width: 450px;
+}
+.checkout-details__title {
+  margin: 0 0 24px;
+}
+.checkout-details .subheading {
+  margin: 24px 0 0;
+}
+.text-field-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/* grid for text fields */
+.flex-grid-full {
+  flex: 1 100%;
+}
+.flex-grid-halfs {
+  width: 48%;
+}
+.flex-grid-thirds {
+  width: 30.33%;
+}
+.checkout__checkbox {
+  margin-top: 24px;
+}
+.text-field--coupon {
+  max-width: 180px;
+}
+/* order confirm */
+.order-confirm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 450px;
+  flex: 1;
+}
+.order-confirm__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.order-confirm__title {
+  margin: 0;
+}
+.order-confirm .menu__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn--place-order {
+  margin-top: 16px;
+}
+@media screen and (min-width: 800px) {
+  .order-confirm.card {
+    margin-left: 0;
+  }
+  .order-confirm {
+    max-width: 300px;
+  }
+}
+
+
+
+
+
+
+/*------------------------------------*\
+  #SIGNUP
+\*------------------------------------*/
+
+/* backdrop */
+.signup-background {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/* dialog */
+.signup-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+/* phone images */
+.phone-images {
+  display: none;
+}
+.iphone {
+  background: url(https://dl.dropboxusercontent.com/s/uaiyg11d92hm55h/iphone-group.png?raw=1) no-repeat;
+  height: 664.59px;
+  width: 433px;
+  margin: 50px 20px 0 0;
+}
+  .iphone--1 {
+    position: relative;
+    height: 489px;
+    width: 276px;
+    left: 123px;
+    top: 90px;
+  }
+
+/* signup */
+.signup {
+  max-width: 350px;
+}
+.signup__title {
+  text-align: center;
+  margin: 8px 0 16px;
+}
+.signup__subheading {
+  text-align: center;
+  margin: 0 0 16px;
+  font-weight: 500;
+}
+.registration {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+  .registration__divider {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+  }
+.divider {
+  height: 1px;
+  flex: 1;
+  min-width: 20px;
+  background-color: rgba(0,0,0,.12);
+}
+  .divider__text {
+    margin: 0 10px;
+  }
+.btn--google {
+  height: 40px;
+  margin: 0;
+  padding: 0 8px 0 0;
+  display: flex;
+  align-items: center;
+}
+  .btn--google__text {
+    display: block;
+    margin-left: 24px;
+  }
+.google-logo {
+  border: 1px solid var(--accent);
+  border-radius: 2px;
+  background-color: #ffffff;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  .google-logo__icon {
+    background: url(https://dl.dropboxusercontent.com/s/ainpsy0q9xujltn/Google_-G-_Logo.svg?raw=1) no-repeat;
+    height: 18px;
+    width: 18px;
+  }
+.btn--signup {
+  height: 40px;
+  margin: 16px 0;
+}
+.terms {
+  text-align: center;
+  margin: 0 35px;
+  line-height: 1.15rem;
+}
+
+/* login */
+.login-card {
+  display: flex;
+  justify-content: center;
+}
+  .login-card__text {
+    margin: 0;
+  }
+.footer {
+  display: flex;
+  justify-content: center
+}
+.footer__menu {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.footer__menu__divider {
+  height: 16px;
+  width: 1px;
+  background-color: rgba(0,0,0,.12);
+  margin: 0 12px;
+}
+@media screen and (min-width: 800px) {
+  .phone-image__holder {
+    display: block;
+  }
+}

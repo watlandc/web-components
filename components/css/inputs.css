@@ -1,0 +1,253 @@
+/*------------------------------------*\
+  #TEXT-FIELDS
+\*------------------------------------*/
+
+.text-field {
+  position: relative;
+}
+.text-field__input {
+  width: 100%;
+  border-width: 0 0 1px;
+  border-bottom-color: var(--divider);
+  background: none;
+  font-size: var(--input-font-size);
+  font-family: var(--font-family);
+  color: var(--primary-text);
+  box-sizing: border-box;
+  margin: 0 0 8px 0;
+}
+.text-field__input:focus {
+  border-bottom: 2px solid var(--accent);
+  outline: none;
+}
+/* floating label */
+.text-field__label {
+  color: var(--inactive-text);
+  position: absolute;
+  top: 36px;
+  left: 0;
+  transition-property: top left;
+  transition-duration: .25s; 
+  transition-timing-function: cubic-bezier(.25,.8,.25,1);
+}
+.text-field--floating-label {
+  height: 65px;
+  padding: 36px 0 8px 0;
+  z-index: 1;
+  position: relative;
+}
+.text-field--floating-label:focus + .text-field__label,
+.text-field--floating-label:valid + .text-field__label {
+  color: var(--secondary-text);
+  font-size: 12px;
+  top: 16px;
+  left: 0;
+  transition-property: top left;
+  transition-duration: .2s;
+  transition-timing-function: cubic-bezier(.25,.8,.25,1);
+}
+.text-field--floating-label:focus + .text-field__label {
+  color: var(--accent);
+}
+/* icon inputs */
+.icon-text-field {
+  position: relative;
+  padding-left: 42px;
+  display: block;
+}
+.text-field--single {
+  padding: 16px 0 8px 0;
+  height: 48px;
+}
+.text-field__icon + i {
+  position: absolute;
+  left: 0px;
+  top: 16px;
+}
+.text-field__icon:focus + i {
+  color: var(--accent);
+}
+.date-input {
+  width: auto;
+}
+/* style placeholder text */
+.text-field__input::-webkit-input-placeholder {
+  color: var(--inactive-text);
+  font-family: var(--font-family);
+  font-size: var(--input-font-size);
+  font-weight: var(--font-weight-regular);
+}
+.text-field__input::-moz-placeholder {
+  color: var(--inactive-text);
+  font-family: var(--font-family);
+  font-size: var(--input-font-size);
+  font-weight: var(--font-weight-regular);
+}
+.text-field__input:-ms-input-placeholder {
+  color: var(--inactive-text);
+  font-family: var(--font-family);
+  font-size: var(--input-font-size);
+  font-weight: var(--font-weight-regular);
+}
+/* placeholder focus state */
+.text-field__input:focus::-webkit-input-placeholder {
+  color: var(--inactive-text);
+  font-family: var(--font-family);
+  font-size: var(--input-font-size);
+  font-weight: var(--font-weight-regular);
+}
+.text-field__input:focus::-moz-placeholder {
+  color: var(--inactive-text);
+  font-family: var(--font-family);
+  font-size: var(--input-font-size);
+  font-weight: var(--font-weight-regular);
+}
+.text-field__input:focus:-ms-input-placeholder {
+  color: var(--inactive-text);
+  font-family: var(--font-family);
+  font-size: var(--input-font-size);
+  font-weight: var(--font-weight-regular);
+}
+
+
+
+
+
+/*------------------------------------*\
+  #SELECT-MENU
+\*------------------------------------*/
+
+select {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+.select_arrow {
+  position: absolute;
+  top: 36px;
+  right: 0;
+}
+select.text-field--floating-label:focus + label {
+  color: var(--primary-text);
+  font-size: 16px;
+  top: 36px;
+  left: 0;
+  transition-property: top left;
+  transition-duration: .2s;
+  transition-timing-function: cubic-bezier(.25,.8,.25,1);
+}
+select.text-field--floating-label:focus ~ i {
+  color: var(--primary-text);
+}
+select.text-field--floating-label:valid:focus + label {
+  color: var(--accent);
+  font-size: 12px;
+  top: 16px;
+  left: 0;
+  transition-property: top left;
+  transition-duration: .2s;
+  transition-timing-function: cubic-bezier(.25,.8,.25,1);
+}
+
+
+
+
+
+/*------------------------------------*\
+  #DATE-PICKER
+\*------------------------------------*/
+
+.date-input::-webkit-datetime-edit { 
+  font-family: var(--font-family);
+  color: var(--primary-text); 
+  font-size: 16px;
+  border-style: none;
+}
+input[type="date"]:focus { background: none; }
+.date-input::-webkit-datetime-edit-fields-wrapper { background-color: none }
+.date-input::-webkit-datetime-edit-text { 
+  color: var(--divider);
+  padding: 0 6px;
+}
+.date-input::-webkit-datetime-edit-month-field:focus { background: none; }
+.date-input::-webkit-datetime-edit-day-field:focus { background: none; }
+.date-input::-webkit-datetime-edit-year-field:focus { background: none; }
+.date-input::-webkit-datetime-edit-hour-field:focus { background: none; }
+.date-input::-webkit-datetime-edit-minute-field:focus { background: none; }
+.date-input::-webkit-datetime-edit-ampm-field:focus { background: none; }
+.date-input::-webkit-inner-spin-button { display: none; }
+.date-input::-webkit-calendar-picker-indicator { 
+  font-size: 18px;
+  background: none;
+  color: var(--inactive-text);
+}
+.date-input::-webkit-calendar-picker-indicator:hover {
+  color: var(--primary-text);
+}
+.date-input::-webkit-clear-button { display: none; }
+
+
+
+
+
+/*------------------------------------*\
+  #COLOR-PICKER
+\*------------------------------------*/
+
+.color-picker {
+  margin: 10px 0;
+  display: flex;
+}
+.color-picker__label {
+  margin-right: 8px;
+}
+.color-picker__input {
+  width: 100%;
+}
+/* style default color picker */
+
+input[type=range] {
+  -webkit-appearance: none;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-thumb {
+  height: 10px;
+  width: 10px;
+  margin-top: -4px;
+  border-radius: 50%;
+  background-color: var(--inactive);
+  outline: none;
+  -webkit-appearance: none;
+}
+input[type=range]:focus::-webkit-slider-thumb {
+  background-color: var(--accent);
+
+}
+input[type=range]::-webkit-slider-runnable-track {
+  background-color: rgba(0, 0, 0, 0.26);
+  height: 2px;
+  border: 0;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background-color: var(--accent);
+}
+
+
+
+
+
+
+
+
+/* --------- TODO: Implment dense screen tweak later ----------- */
+/* @media screen and (min-width: 768px) {
+  .input  {
+    margin: 16px 0 4px 0;
+    height: ; TODO
+  }
+  .text-field--single {
+    margin: 12px 0 4px 0;
+    height: ; TODO
+  }
+} */
