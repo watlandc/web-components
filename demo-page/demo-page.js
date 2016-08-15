@@ -2,17 +2,19 @@
   #SCROLL-TO-NEXT-PANEL
 \*------------------------------------*/
 
-var windowHeight = $(window).height() - 56;
+$(document).ready(function() {
 
-$(".js-btn--keyboard-arrow-down").on("click", function() {
-  $(".js-scroll").animate({scrollTop: windowHeight}, 300);
+  var windowHeight = $(window).height() - 56;
+
+  $(".js-btn--keyboard-arrow-down").on("click", function() {
+    $(".js-scroll").animate({scrollTop: windowHeight}, 300);
+  });
+
+  $(".js-btn--keyboard-arrow-up").on("click", function() {
+    $(".js-scroll").animate({scrollTop: 0}, 300);
+  });
+
 });
-
-$(".js-btn--keyboard-arrow-up").on("click", function() {
-  $(".js-scroll").animate({scrollTop: 0}, 300);
-});
-
-
 
 
 /*------------------------------------*\
@@ -21,7 +23,7 @@ $(".js-btn--keyboard-arrow-up").on("click", function() {
 
 function initMap() {
   var myLatLng = {lat: 41.910, lng: -87.690}
-   
+  
   // Create a map object and specify the DOM element for display.
   var mapDiv = document.getElementById('map');
   var map = new google.maps.Map(mapDiv, {
@@ -54,5 +56,4 @@ function initMap() {
     var control = this;
   }
 };
-
 
