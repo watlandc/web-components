@@ -49,6 +49,28 @@
 .text-field--floating-label:focus + .text-field__label {
   color: var(--accent);
 }
+/* warn state */
+.text-field__input--warn {
+  border-bottom: 2px solid var(--warn);
+}
+.text-field__input--warn:focus {
+  border-bottom: 2px solid var(--warn);
+}
+.text-field__helper--warn {
+  font-family: var(--font-family);
+  font-size: var(--text-field-error);
+  color: var(--warn);
+}
+.text-field--floating-label--warn:focus + .text-field__label {
+  color: var(--warn);
+}
+.text-field__input--warn:focus + .text-field__label {
+  color: var(--warn);
+}
+
+
+
+
 /* icon inputs */
 .icon-text-field {
   position: relative;
@@ -69,6 +91,10 @@
 }
 .date-input {
   width: auto;
+}
+/* warn state */
+.text-field__input--warn:focus + i {
+  color: var(--warn) !important;
 }
 /* style placeholder text */
 .text-field__input::-webkit-input-placeholder {
@@ -156,6 +182,9 @@ select.text-field--floating-label:valid:focus + label {
   #DATE-PICKER
 \*------------------------------------*/
 
+.date-input__helper {
+  display: block;
+}
 .date-input::-webkit-datetime-edit { 
   font-family: var(--font-family);
   color: var(--primary-text); 

@@ -175,7 +175,6 @@
 
 
 
-
   <!-- text fields -->
 
   <div class="card">
@@ -187,16 +186,19 @@
     <h5 class="subheading">Floating label text fields</h5>
 
     <div class="text-field">
-      <input class="text-field__input text-field--floating-label" type="text" name="first" id="first" required>
+      <input class="text-field__input text-field--floating-label js-text-field__input" type="text" name="first" id="first" min="2" required>
       <label class="text-field__label" for="first">First name</label>
+      <span class="js-input__helper"></span>
     </div>
     <div class="text-field">
       <input class="text-field__input text-field--floating-label" type="text" name="last" id="last" required>
       <label class="text-field__label" for="last">Last name</label>
+      <span class="js-input__helper"></span>
     </div>
     <div class="text-field">
       <input class="text-field__input text-field--floating-label" type="text" name="address" id="address" required>
       <label class="text-field__label" for="address">Address</label>
+      <span class="js-input__helper"></span>
     </div>
     <div class="text-field">
       <input class="text-field__input text-field--floating-label" type="text" name="address2" id="address2" required>
@@ -205,6 +207,7 @@
     <div class="text-field">
       <input class="text-field__input text-field--floating-label" type="text" name="city" id="city" required>
       <label class="text-field__label" for="city">City</label>
+      <span class="js-input__helper"></span>
     </div>
 
     <!-- select menu -->
@@ -216,7 +219,6 @@
       <label class="text-field__label" for="state">State</label>
       <i class="material-icons select_arrow">arrow_drop_down</i>
     </div>
-
     <div class="text-field">
       <input class="text-field__input text-field--floating-label" type="text" name="zip" id="zip" required>
       <label class="text-field__label" for="zip">Postal code</label>
@@ -231,12 +233,14 @@
     <h5 class="subheading">Icon inputs</h5>
 
     <div class="icon-text-field">
-      <input class="text-field__input text-field__icon text-field--single" type="email" name="email" placeholder="Email">
+      <input class="text-field__input text-field__icon text-field--single" type="email" id="email" name="email" placeholder="Email">
       <i class="material-icons dark">email</i>
+      <span class="js-input__helper"></span>
     </div>
     <div class="icon-text-field">
-      <input class="text-field__input text-field__icon text-field--single" type="phone" name="phone" placeholder="Phone Number">
+      <input class="text-field__input text-field__icon text-field--single" type="phone" id="phone" name="phone" placeholder="Phone Number">
       <i class="material-icons dark">phone</i>
+      <span class="js-input__helper"></span>
     </div>
 
     <!-- date input -->
@@ -244,15 +248,16 @@
     <h5 class="subheading">Date input</h5>
 
     <time class="icon-text-field">
-      <input class="text-field__input date-input text-field__icon text-field--single" id="date" type="datetime-local">
-      <i class="material-icons dark">today</i>
+      <input class="text-field__input date-input text-field__icon text-field--single" id="date" type="datetime-local" value="2016-09-11">
+      <i class="material-icons dark js-text-field__icon--warn">today</i>
+      <span class="js-input__helper date-input__helper"></span>
     </time>
 
     <!-- color input -->
 
     <h5 class="subheading">Color input</h5>
 
-    <input type="color">
+    <input type="color" id="color">
 
   </div>
 
