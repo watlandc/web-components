@@ -10,164 +10,165 @@
   <link rel="stylesheet" href="../components/css/nav-drawer.css">
   <link rel="stylesheet" href="../components/css/selection-controls.css">
   <link rel="stylesheet" href="css/dialogs.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-  <script src="js/dialogs.js" defer></script>
+  <script src="js/shipping.js" defer></script>
 </head>
 
 <body>
 
 <div class="checkout-background">
 
-<div class="checkout-dialog">
+  <form class="checkout-dialog" id="js-checkout-form" novalidate>
 
-  <section class="checkout-details card">
+    <section class="checkout-details card">
 
-    <h1 class="checkout-details__title title">Checkout</h1>
+      <h1 class="checkout-details__title title">Checkout</h1>
 
-    <a class="body-2 accent-text" href="">Returning guest?</a>
+      <a class="body-2 accent-text" href="">Returning guest?</a>
 
-    <!-- contact info -->
+      <!-- contact info -->
 
-    <h2 class="subheading">Contact Info</h2>
+      <h2 class="subheading">Contact Info</h2>
 
-    <div class="text-field">
-      <input class="text-field__input text-field--floating-label" type="text" name="email" id="email" required>
-      <label class="text-field__label" for="email">Email</label>
-    </div>  
-    <div class="text-field">
-      <input class="text-field__input text-field--floating-label" type="text" name="phone" id="phone" required>
-      <label class="text-field__label" for="phone">Phone number</label>
-    </div>  
+      <div class="text-field">
+        <input class="text-field__input text-field--floating-label" type="text" name="email" id="email" required>
+        <label class="text-field__label" for="email">Email</label>
+        <span class="js-input__helper"></span>
+      </div>  
+      <div class="text-field">
+        <input class="text-field__input text-field--floating-label" type="text" name="phone" id="phone" required>
+        <label class="text-field__label" for="phone">Phone number</label>
+        <span class="js-input__helper"></span>
+      </div>  
 
-    <!-- delivery address -->
+      <!-- delivery address -->
 
-    <h2 class="subheading">Delivery address</h2>
+      <h2 class="subheading">Delivery address</h2>
 
-    <div class="text-field-group">
+      <div class="text-field-group">
 
-      <div class="text-field flex-grid-halfs">
-        <input class="text-field__input text-field--floating-label" type="text" name="first" id="first" required>
-        <label class="text-field__label" for="first">First</label>
-      </div>
-      <div class="text-field flex-grid-halfs">
-        <input class="text-field__input text-field--floating-label" type="text" name="last" id="last" required>
-        <label class="text-field__label" for="last">Last</label>
-      </div>
-      <div class="text-field flex-grid-halfs">
-        <input class="text-field__input text-field--floating-label" type="text" name="address" id="address" required>
-        <label class="text-field__label" for="address">Address</label>
-      </div>
-      <div class="text-field flex-grid-halfs">
-        <input class="text-field__input text-field--floating-label" type="text" name="address2" id="address2" required>
-        <label class="text-field__label" for="address2">Address 2</label>
-      </div>
-      <div class="text-field flex-grid-thirds">
-        <input class="text-field__input text-field--floating-label" type="text" name="city" id="city" required>
-        <label class="text-field__label" for="city">City</label>
-      </div>
-      <div class="text-field flex-grid-thirds">
-        <select class="text-field__input text-field--floating-label" name="state" id="state" required>
-            <option value="" disabled selected hidden></option>
-        </select>
-        <label class="text-field__label" for="state">State</label>
-        <i class="material-icons select_arrow">arrow_drop_down</i>
-      </div>
-      <div class="text-field flex-grid-thirds">
-        <input class="text-field__input text-field--floating-label" type="text" name="zip" id="zip" required>
-        <label class="text-field__label" for="zip">Postal code</label>
-      </div>
+        <div class="text-field flex-grid-halfs">
+          <input class="text-field__input text-field--floating-label" type="text" name="first" id="first" required>
+          <label class="text-field__label" for="first">First</label>
+          <span class="js-input__helper"></span>
+        </div>
+        <div class="text-field flex-grid-halfs">
+          <input class="text-field__input text-field--floating-label" type="text" name="last" id="last" required>
+          <label class="text-field__label" for="last">Last</label>
+          <span class="js-input__helper"></span>
+        </div>
+        <div class="text-field flex-grid-halfs">
+          <input class="text-field__input text-field--floating-label" type="text" name="address" id="address" required>
+          <label class="text-field__label" for="address">Address</label>
+          <span class="js-input__helper"></span>
+        </div>
+        <div class="text-field flex-grid-halfs">
+          <input class="text-field__input text-field--floating-label" type="text" name="address2" id="address2" required>
+          <label class="text-field__label" for="address2">Address 2</label>
+          <span class="js-input__helper"></span>
+        </div>
+        <div class="text-field flex-grid-thirds">
+          <input class="text-field__input text-field--floating-label" type="text" name="city" id="city" required>
+          <label class="text-field__label" for="city">City</label>
+          <span class="js-input__helper"></span>
+        </div>
+        <div class="text-field flex-grid-thirds">
+          <select class="text-field__input text-field--floating-label" name="state" id="state" required>
+              <option value="" disabled selected hidden></option>
+          </select>
+          <label class="text-field__label" for="state">State</label>
+          <i class="material-icons select_arrow">arrow_drop_down</i>
+          <span class="js-input__helper"></span>
+        </div>
+        <div class="text-field flex-grid-thirds">
+          <input class="text-field__input text-field--floating-label" type="text" name="zip" id="zip" required>
+          <label class="text-field__label" for="zip">Postal code</label>
+          <span class="js-input__helper"></span>
+        </div>
 
-    </div>
-
-    <!-- payment method -->
-
-    <h2 class="subheading">Payment Method</h2>
-
-    <div class="text-field-group">
-
-      <div class="text-field flex-grid-full">
-        <input class="text-field__input text-field--floating-label" type="text" name="name-on-card" id="name-on-card" required>
-        <label class="text-field__label" for="name-on-card">Name on card</label>
-      </div>
-      <div class="text-field flex-grid-full">
-        <input class="text-field__input text-field--floating-label" type="text" name="card-number" id="card-number" required>
-        <label class="text-field__label" for="card-number">Card number</label>
-      </div>
-      <div class="text-field flex-grid-thirds">
-        <input class="text-field__input text-field--floating-label" type="text" name="month" id="month" required>
-        <label class="text-field__label" for="month">MM</label>
-      </div>
-      <div class="text-field flex-grid-thirds">
-        <input class="text-field__input text-field--floating-label" type="text" name="year" id="year" required>
-        <label class="text-field__label" for="year">YY</label>
-      </div>
-      <div class="text-field flex-grid-thirds">
-        <input class="text-field__input text-field--floating-label" type="text" name="cvc" id="cvc" required>
-        <label class="text-field__label" for="cvc">CVC</label>
       </div>
 
-    </div>
+      <!-- payment method -->
 
-    <!-- store billing details -->
+      <h2 class="subheading">Payment Method</h2>
 
-    <div class="checkout__checkbox checkbox">
-      <input class="checkbox__input" id="billing" type="checkbox" name="billing" value="billing" checked>
-      <label class="checkbox__label" for="billing">Save billing method for next purchase?</label>
-    </div>
+      <div class="text-field-group">
 
-    <!-- coupon code -->
+        <div class="text-field flex-grid-full">
+          <input class="text-field__input text-field--floating-label" type="text" name="name-on-card" id="name-on-card" required>
+          <label class="text-field__label" for="name-on-card">Name on card</label>
+          <span class="js-input__helper"></span>
+        </div>
+        <div class="text-field flex-grid-full">
+          <input class="text-field__input text-field--floating-label" type="text" name="card-number" id="card-number" required>
+          <label class="text-field__label" for="card-number">Card number</label>
+          <span class="js-input__helper"></span>
+        </div>
+        <div class="text-field flex-grid-thirds">
+          <input class="text-field__input text-field--floating-label" type="text" name="month" id="card-month" required>
+          <label class="text-field__label" for="month">MM</label>
+          <span class="js-input__helper"></span>
+        </div>
+        <div class="text-field flex-grid-thirds">
+          <input class="text-field__input text-field--floating-label" type="text" name="year" id="card-year" required>
+          <label class="text-field__label" for="year">YY</label>
+          <span class="js-input__helper"></span>
+        </div>
+        <div class="text-field flex-grid-thirds">
+          <input class="text-field__input text-field--floating-label" type="text" name="cvc" id="card-cvc" required>
+          <label class="text-field__label" for="cvc">CVC</label>
+          <span class="js-input__helper"></span>
+        </div>
 
-    <div class="icon-text-field text-field--coupon">
-      <input class="text-field__input text-field__icon text-field--single" type="text" name="promo" placeholder="Add promo code">
-      <i class="material-icons dark">loyalty</i>
-    </div>
+      </div>
 
-  </section>
+      <!-- store billing details -->
 
-  <!-- order confirm -->
+      <div class="checkout__checkbox checkbox">
+        <input class="checkbox__input" id="billing" type="checkbox" name="billing" value="billing" checked>
+        <label class="checkbox__label" for="billing">Save billing method for next purchase?</label>
+      </div>
 
-  <section class="order-confirm card">
+      <!-- coupon code -->
 
-    <div class="order-confirm__header">
-      <h1 class="order-confirm__title title">Order</h1>
-      <i class="material-icons dark">close</i>
-    </div>
-    <ul class="menu body-1">
-      <li class="menu__item">
-        <span>Item(s)</span>
-        <span>$20</span>
-      </li>
-      <li class="menu__item">
-        <span>Estimated tax</span>
-        <span>$2</span>
-      </li>
-      <li class="menu__item">
-        <span>Shipping</span>
-        <span>$5</span>
-      </li>
-      <li class="menu__item">
-        <span>Estimated total</span>
-        <span>$27</span>
-      </li>
-    </ul>
+      <div class="icon-text-field text-field--coupon">
+        <input class="text-field__input text-field__icon text-field--single" type="text" name="promo" placeholder="Add promo code">
+        <i class="material-icons dark">loyalty</i>
+      </div>
 
-    <button class="btn--place-order btn--raised accent primary-text--light">PLACE ORDER</button>
+    </section>
 
-    
+    <!-- order confirm -->
 
+    <section class="order-confirm card">
 
+      <div class="order-confirm__header">
+        <h1 class="order-confirm__title title">Order</h1>
+        <i class="material-icons dark">close</i>
+      </div>
+      <ul class="menu body-1">
+        <li class="menu__item">
+          <span>Item(s)</span>
+          <span>$20</span>
+        </li>
+        <li class="menu__item">
+          <span>Estimated tax</span>
+          <span>$2</span>
+        </li>
+        <li class="menu__item">
+          <span>Shipping</span>
+          <span>$5</span>
+        </li>
+        <li class="menu__item">
+          <span>Estimated total</span>
+          <span>$27</span>
+        </li>
+      </ul>
 
-  </section>
+      <button type="submit" form="js-checkout-form" value="submit" class="btn--place-order btn--raised accent primary-text--light">PLACE ORDER</button>
 
+    </section>
 
-
-  </div>
-
-
-
-
-
-
+  </form>
 
 </div>
 

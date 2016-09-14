@@ -11,14 +11,14 @@
   <link rel="stylesheet" href="../components/css/selection-controls.css">
   <link rel="stylesheet" href="css/dialogs.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-  <script src="js/dialogs.js" defer></script>
+  <script src="js/scheduling.js" defer></script>
 </head>
 
 <body>
 
 <div class="scheduling-background">
 
-  <div class="scheduling-dialog card">
+  <form class="scheduling-dialog card" id="js-scheduler" novalidate>
 
     <h1 class="scheduler__title title">Pickup Time</h1>
 
@@ -27,6 +27,7 @@
     <div class="scheduler icon-text-field">
       <input class="date-input text-field__input text-field__icon text-field--single" id="date" type="datetime-local">
       <i class="material-icons dark">today</i>
+      <span class="js-input__helper date-input__helper"></span>
     </div>
 
     <!-- comment -->
@@ -40,12 +41,12 @@
 
     <div class="btn--inline-buttons">
       <button class="btn--flat">CANCEL</button>
-      <button class="btn--flat accent-text">SAVE</button>
+      <button type="submit" form="js-scheduler" value="submit" class="btn--flat accent-text">SAVE</button>
     </div>
 
 
 
-  </div>
+  </form>
 
 </div>
 

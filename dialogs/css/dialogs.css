@@ -458,7 +458,7 @@
   margin: 0 12px;
 }
 @media screen and (min-width: 800px) {
-  .phone-image__holder {
+  .phone-images {
     display: block;
   }
 }

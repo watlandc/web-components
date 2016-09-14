@@ -138,6 +138,8 @@ document.getElementById("date").value = today;
 
 
 
+
+
 /*------------------------------------*\
   #CONSTRAINT-VALIDATION-API
 \*------------------------------------*/
@@ -162,6 +164,7 @@ var firstName = document.getElementById("first");
 var lastName = document.getElementById("last");
 var fullName = document.getElementById("fullName");
 var emailAddress = document.getElementById("email");
+var loginEmail = document.getElementById("js-login-email");
 var phoneNumber = document.getElementById("phone");
 var address = document.getElementById("address");
 var address2 = document.getElementById("address2");
@@ -201,7 +204,7 @@ validator.isBeforeToday = function(input) {
   } return false;
 }
 
-
+// live check text field
 function warn(element, message) {
 
   element.addEventListener("blur", function(event) {
@@ -219,16 +222,15 @@ function warn(element, message) {
     }
   })
 };
-warn(firstName, "Last name is required");
+warn(firstName, "First name is required");
 warn(lastName, "Last name is required");
 warn(address, "Address is required");
 warn(city, "City is required");
 
-
+// live check validator function
 function errorCheck(input, message, callback) {
 
   input.addEventListener("blur", function(event) {
-
     if (callback(input.value) || this.value.length < 1) {
       this.classList.remove("text-field__floating-label--warn");
       this.classList.remove("text-field__input--warn");
@@ -245,8 +247,8 @@ function errorCheck(input, message, callback) {
 errorCheck(emailAddress, "Please provide a valid email address", validator.isEmailAddress);
 errorCheck(phoneNumber, "Please provide a valid phone number", validator.isPhoneNumber);
 
+// live check date 
 function dateCheck(input, message, callback) {
-
   input.addEventListener("input", function(event) {
     if (callback(input.value) || input.value === "") {
       this.classList.remove("text-field__floating-label--warn");
@@ -262,7 +264,5 @@ function dateCheck(input, message, callback) {
   })
 };
 dateCheck(dateInput, "Birthdate must be before today", validator.isBeforeToday);
-
-
 
 

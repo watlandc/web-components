@@ -10,8 +10,7 @@
   <link rel="stylesheet" href="../components/css/nav-drawer.css">
   <link rel="stylesheet" href="../components/css/selection-controls.css">
   <link rel="stylesheet" href="css/dialogs.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-  <script src="../components/components.js" defer></script>
+  <script src="js/sign-up.js" defer></script>
 </head>
 <body>
 
@@ -63,24 +62,27 @@
 
         <!-- sign up form -->
 
-        <form class="js-form" action="">
+        <form class="js-form" id="signup" action="" novalidate>
 
           <div class="text-field">
             <input class="text-field__input text-field--floating-label" type="text" name="full-name" id="full-name" required>
             <label class="text-field__label" for="full-name">Full name</label>
+            <span class="js-input__helper"></span>
           </div>
           <div class="text-field">
             <input class="text-field__input text-field--floating-label" type="text" name="email" id="email" required>
             <label class="text-field__label" for="email">Email</label>
+            <span class="js-input__helper"></span>
           </div>
           <div class="text-field"> 
             <input class="text-field__input text-field--floating-label" type="text" name="password" id="password" required>
             <label class="text-field__label" for="password">Password</label>
+            <span class="js-input__helper"></span>
           </div>
 
         </form>
 
-        <button class="btn--signup btn--raised accent primary-text--light">SIGN UP</button>
+        <button type="submit" form="signup" value="submit" class="btn--signup btn--raised accent primary-text--light">SIGN UP</button>
 
         <!-- site terms -->
 
