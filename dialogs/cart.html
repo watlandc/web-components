@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="../app/default.css">
+  <link rel="stylesheet" href="../app/color-palette.css">
+  <link rel="stylesheet" href="../components/css/app-bar.css">
+  <link rel="stylesheet" href="../components/css/buttons.css">
+  <link rel="stylesheet" href="../components/css/inputs.css">
+  <link rel="stylesheet" href="../components/css/nav-drawer.css">
+  <link rel="stylesheet" href="../components/css/selection-controls.css">
+  <link rel="stylesheet" href="css/dialogs.css">
+  <script src="js/cart.js" defer></script>
+</head>
+<body>
+  
+<!-- dialog background -->
+
+<div class="cart-background">
+
+  <!-- dialog card -->
+
+  <div class="cart-dialog card">
+  
+    <div class="cart__header">
+      <h1 class="cart__title title">Cart</h1>
+      <button class="btn--icon" id="js-btn--close">
+        <i class="material-icons dark">close</i>
+      </button>
+    </div>
+  
+    <button class="btn--checkout btn--raised accent primary-text--light">CHECKOUT</button>
+
+    <ul class="cart-grid" id="js-cart-grid">
+
+        <li class="grid__menu-item">
+          <img class="img--drip"/>
+          <div class="product-info">
+            <h3 class="menu-item__title subheading">Drip Coffee</h3>
+            <p class="menu-item__subheading body-1">Fresh cup o' joe</p>
+
+            <div class="order-btn-row">
+
+              <button class="btn--remove btn--flat accent-text">REMOVE</button>
+
+              <div class="text-field text-field--qty">
+                
+                <select class="text-field__input text-field--single" name="order-qty" id="order-qty" required>
+                  <option value="1" selected>1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                <label class="text-field__label" for="order-qty"></label>
+                <i class="material-icons select_arrow">arrow_drop_down</i>
+              </div>
+
+              <span class="order-btn-row__spacer"></span>
+
+              <span class="subheading">$10</span>
+
+            </div>
+          </div>
+        </li>
+
+        <li class="grid__menu-item">
+          <img class="img--drip"/>
+          <div class="product-info">
+            <h3 class="menu-item__title subheading">Drip Coffee</h3>
+            <p class="menu-item__subheading body-1">Fresh cup o' joe</p>
+
+            <div class="order-btn-row">
+
+              <button class="btn--remove btn--flat accent-text">REMOVE</button>
+
+              <div class="text-field text-field--qty">
+                
+                <select class="text-field__input text-field--single" name="order-qty" id="order-qty" required>
+                  <option value="1" selected>1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                <label class="text-field__label" for="order-qty"></label>
+                <i class="material-icons select_arrow">arrow_drop_down</i>
+              </div>
+
+              <span class="order-btn-row__spacer"></span>
+
+              <span class="subheading">$10</span>
+
+            </div>
+          </div>
+        </li>
+
+    </ul>
+    
+    <button class="btn--checkout btn--raised accent primary-text--light">CHECKOUT</button>
+
+
+  </div>
+
+</div>
+
+</body>
+</html>

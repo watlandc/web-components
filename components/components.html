@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/selection-controls.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
   <script src="components.js" defer></script>
+  <script src="validation.js" defer></script>
 </head>
 <body>
 
@@ -219,6 +220,7 @@
       <label class="text-field__label" for="state">State</label>
       <i class="material-icons select_arrow">arrow_drop_down</i>
     </div>
+
     <div class="text-field">
       <input class="text-field__input text-field--floating-label" type="text" name="zip" id="zip" required>
       <label class="text-field__label" for="zip">Postal code</label>
@@ -248,7 +250,7 @@
     <h5 class="subheading">Date input</h5>
 
     <time class="icon-text-field">
-      <input class="text-field__input date-input text-field__icon text-field--single" id="date" type="datetime-local" value="2016-09-11">
+      <input class="text-field__input date-input text-field--single" id="date" type="datetime-local" value="2016-09-11">
       <i class="material-icons dark js-text-field__icon--warn">today</i>
       <span class="js-input__helper date-input__helper"></span>
     </time>

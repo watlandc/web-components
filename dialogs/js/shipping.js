@@ -105,7 +105,7 @@ validator.isEmpty = function(input) {
 }
 
 // target elements
-var form = document.getElementById("js-checkout-form");
+var form = document.querySelector(".js-checkout-form");
 var firstName = document.getElementById("first");
 var lastName = document.getElementById("last");
 var nameOnCard = document.getElementById("name-on-card");
@@ -119,7 +119,6 @@ var creditCard = document.getElementById("card-number");
 var cardMonth = document.getElementById("card-month");
 var cardYear = document.getElementById("card-year");
 var cardCVC = document.getElementById("card-cvc");
-
 
 // live check text field
 function warn(element, message) {

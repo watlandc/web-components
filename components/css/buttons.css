@@ -172,6 +172,7 @@ button:focus {
 \*------------------------------------*/
 
 .btn--icon {
+  position: relative;
   margin: 0 6px;
   height: 40px;
   width: 40px;

@@ -2,69 +2,66 @@
   #ABOUT
 \*------------------------------------*/
 
-/* background */
-.about-transparency {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: rgba(0,0,0,.2);
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 250px 0; /* vertical window resize adjustment */
-}
 /* about dialog */
-.about {
+.about-background {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+.about-dialog {
+  display: flex;
+  flex-direction: column;
   flex: 1;
   max-width: 414px;
-  margin: 0 auto;
 }
-  /* about image holder */
-  .about__image-holder {
-    position: relative;
-    top: 0;
-    height: 70px;
-  }
-  .about__profile-image {
-    display: block;
-    position: relative;
-    margin: 0 auto;
-    transform: translateY(-70px);
-    height: 140px;
-    width: 140px;
-    border-radius: 50%;
-    border: 2px solid #ffffff;
-    background: url(https://dl.dropboxusercontent.com/s/po469fxcme99fu5/profile-image.jpg?raw=1) no-repeat;
-    background-size: cover;
-  }
-  /* about header card */
-  .about__header {
-    background-color: var(--accent);
-  }
-  .about__header.card {
-    padding: 0;
-    margin: 0;
-  }
-  .about__title {
-    padding: 16px 16px 0;
-    text-align: center;
-  }
-  .about__subheading {
-    padding: 16px 16px 24px;
-    text-align: center;
-  }
-  /* about main card */
+.about__header--spacer {
+  height: 70px;
+}
+/* about image holder */
+.about__image-holder {
+  position: relative;
+  top: 0;
+  height: 70px;
+}
+.about__profile-image {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  transform: translateY(-70px);
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  background: url(https://dl.dropboxusercontent.com/s/po469fxcme99fu5/profile-image.jpg?raw=1) no-repeat;
+  background-size: cover;
+}
+/* about header card */
+.about__header {
+  background-color: var(--accent);
+}
+.about__header.card {
+  padding: 0;
+  margin: 0;
+}
+.about__title {
+  padding: 16px 16px 0;
+  text-align: center;
+}
+.about__subheading {
+  padding: 16px 16px 24px;
+  text-align: center;
+}
+/* about main card */
+.about__main.card {
+  margin: 8px;
+}
+@media screen and (min-width: 414px) {
   .about__main.card {
-    margin: 8px;
+    margin: 8px 0;
   }
-  @media screen and (min-width: 414px) {
-    .about__main.card {
-      margin: 8px 0;
-    }
-  }
+}
 
 .list-item {
   margin-top: 16px;
@@ -241,7 +238,7 @@
   min-height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;*/
+  align-items: center;
 }
 .checkout-dialog {
   display: flex;
@@ -255,7 +252,6 @@
   .checkout-dialog {
     flex-direction: row;
     align-items: flex-start;
-
   }
 }
 /* checkout section */
@@ -461,4 +457,151 @@
   .phone-images {
     display: block;
   }
+}
+
+
+
+
+/*------------------------------------*\
+  #SHOPPING-CART
+\*------------------------------------*/
+
+.cart-background {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart-dialog {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 600px;
+}
+.cart__title {
+  margin: 0 0 24px;
+}
+.cart__header {
+  display: flex;
+  justify-content: space-between;
+}
+.btn--checkout {
+  align-self: flex-end;
+}
+.btn--remove {
+  min-width: 70px;
+}
+.text-field--qty {
+  min-width: 50px;
+  margin-left: 20px;  
+}
+.text-field--qty > .select_arrow {
+  position: absolute;
+  top: 15px;
+  right: 0;
+}
+.text-field--qty > .text-field__input {
+  position: relative;
+  z-index: 1;
+  padding-left: 10px;
+}
+.cart-dialog .btn--icon {
+  position: relative;
+  top: -14px;
+}
+.cart-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 0;
+  justify-content: space-around;
+  align-content: space-around;
+  max-width: 1000px;
+}
+.grid__menu-item {
+  padding: 0;
+  margin-bottom: 20px;
+}
+.grid__menu-item {
+  display: flex;
+  margin-top: 10px;
+  width: 100%;
+}
+.product-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+ }
+.order-btn-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto 16px 8px 8px;
+ }
+ .order-btn-row__spacer {
+   flex: 1;
+ }
+.menu-item__title {
+  margin: 16px 16px 8px;;
+}
+.menu-item__subheading {
+  margin: 0 16px;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #IMAGES
+\*------------------------------------*/
+
+img {
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  flex: none;
+}
+.grid__menu-item img {
+  height: 150px;
+  width: 100px;
+}
+@media screen and (min-width: 800px) {
+  .grid__menu-item img {
+    height: 120px;
+    width: 120px;
+  }
+}
+.img--hero {
+  max-width: 100%;
+  margin: 3rem 0;
+}
+.img--salad {
+  background-image: url("https://dl.dropboxusercontent.com/s/b8uj8rklggb0fdu/dinner.jpg?raw=1");
+}
+.img--eggs {
+  background-image: url("https://dl.dropboxusercontent.com/s/z1mrpsaciix51ka/eggs-bowl.jpg?raw=1");
+}
+.img--soup {
+  background-image: url("https://dl.dropboxusercontent.com/s/gpel75c1bpvy9fu/soup.jpg?raw=1");
+}
+.img--espresso {
+  background-image: url("https://dl.dropboxusercontent.com/s/3huj3iykfpyscqm/expresso.jpg?raw=1");
+}
+.img--cold {
+  background-image: url("https://dl.dropboxusercontent.com/s/ohljactzcxhhupu/Cold-Brew-Coffee-1.jpg?raw=1");
+}
+.img--latte {
+  background-image: url("https://dl.dropboxusercontent.com/s/scam9t8omcbohl8/latte.jpg?raw=1");
+}
+.img--tea {
+  background-image: url("https://dl.dropboxusercontent.com/s/on676uztrs0jhiy/tea-image.jpg?raw=1");
+}
+.img--pourover {
+  background-image: url("https://dl.dropboxusercontent.com/s/n3xmehtcjv1c6d9/pour-over.jpeg?raw=1");
+}
+.img--drip {
+  background-image: url("https://dl.dropboxusercontent.com/s/fvljp9opggcivbd/drip.jpeg?raw=1");
 }

@@ -152,7 +152,7 @@ select {
   top: 36px;
   right: 0;
 }
-select.text-field--floating-label:focus + label {
+/*select.text-field--floating-label:focus + label {
   color: var(--primary-text);
   font-size: 16px;
   top: 36px;
@@ -160,11 +160,11 @@ select.text-field--floating-label:focus + label {
   transition-property: top left;
   transition-duration: .2s;
   transition-timing-function: cubic-bezier(.25,.8,.25,1);
-}
-select.text-field--floating-label:focus ~ i {
+}*/
+/*select.text-field--floating-label:focus ~ i {
   color: var(--primary-text);
-}
-select.text-field--floating-label:valid:focus + label {
+}*/
+/*select.text-field--floating-label:valid:focus + label {
   color: var(--accent);
   font-size: 12px;
   top: 16px;
@@ -172,7 +172,7 @@ select.text-field--floating-label:valid:focus + label {
   transition-property: top left;
   transition-duration: .2s;
   transition-timing-function: cubic-bezier(.25,.8,.25,1);
-}
+}*/
 
 
 

@@ -11,19 +11,19 @@
   <link rel="stylesheet" href="components/css/nav-drawer.css">
   <link rel="stylesheet" href="components/css/selection-controls.css">
   <link rel="stylesheet" href="demo-page/demo-page.css">
+  <link rel="stylesheet" href="dialogs/css/dialogs.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-  <script src="demo-page/demo-page.js"></script>
-  <!--<script src="components.js"></script>-->
+  <script src="dialogs/js/shipping.js" defer></script>
+  <script src="demo-page/demo-page.js" defer></script>
   
 
 </head>
 
 <body class="js-scroll"> 
 
-
 <!-- app bar -->
 
-<div class="app-bar app-bar--flex-end">
+<div class="app-bar app-bar--flex-end js-app-bar">
 
   <!-- buttons inline right -->
 
@@ -33,13 +33,22 @@
       <button class="btn--flat secondary-text">ABOUT</button>
     </a>
     
-    <button class="btn--icon">
+    <!-- notifications -->
+
+    <button class="btn--icon btn--cart" id="js-btn--cart">
       <i class="material-icons dark">shopping_cart</i>
+      <div class="notifications__alert is-hidden js-notifications__alert">
+        <div class="notifications__count caption primary-text--light">0</div>
+      </div>
     </button>
 
   </div>
 
 </div>
+
+
+
+
 
 <!-- main content -->
 
@@ -51,14 +60,14 @@
   
   <!-- section container -->
   
-  <div class="demo-content">
+  <div class="demo-content js-demo-content">
 
     <!-- home -->
 
     <section class="demo-section demo-section--home">
 
       <div class="header--home">
-        <h1 class="header--home__title display-2">bucktown diner</h1>
+        <h1 class="header--home__title display-2" id="test4">bucktown diner</h1>
         <h3 class="header--home__subheading display-1">fresh, local, fast food</h3>
       </div>
 
@@ -73,82 +82,14 @@
 
     <!--food menu-->
  
-    <section class="demo-section demo-section--food">
+    <section class="demo-section demo-section--food" id="js-demo-section--food">
 
       <h3 class="header--food title">Lunch daily 11AM - 6PM</h3>
 
       <!-- product grid -->
 
-      <ul class="grid">
+      <ul class="grid" id="js-food-grid"></ul>
 
-        <li class="grid__menu-item card">
-          <img class="img--soup"/>
-          <div class="product-info">
-            <h3 class="menu-item__title subheading">Potato Leek Soup</h3>
-            <p class="menu-item__subheading body-1">Leek soup is soup based on potatos, leek, broth, and cream.</p>
-            <div class="order-btn-row">
-              <button class="btn--order btn--flat accent-text">ORDER NOW</button>
-              <span class="subheading">$10</span>
-            </div>
-          </div>
-        </li>
-        <li class="grid__menu-item card">
-          <img class="img--eggs"/>
-          <div class="product-info">
-            <h3 class="menu-item__title subheading">Mushroom Casserole</h3>
-            <p class="menu-item__subheading body-1">A combination of spinach aand mushrooms.</p>
-            <div class="order-btn-row">
-              <button class="btn--order btn--flat accent-text">ORDER NOW</button>
-              <span class="subheading">$10</span>
-            </div>
-          </div>
-        </li>
-        <li class="grid__menu-item card">
-          <img class="img--salad"/>
-          <div class="product-info">
-            <h3 class="menu-item__title subheading">Salmon Salad</h3>
-            <p class="menu-item__subheading body-1">Salad topped with a vinaigrette sauce.</p>
-            <div class="order-btn-row">
-              <button class="btn--order btn--flat accent-text">ORDER NOW</button>
-              <span class="subheading">$10</span>
-            </div>
-          </div>
-        </li>
-        <li class="grid__menu-item card">
-          <img class="img--soup"/>
-          <div class="product-info">
-            <h3 class="menu-item__title subheading">Potato Leek Soup</h3>
-            <p class="menu-item__subheading body-1">Leek soup is soup based on potatos, leek, broth, and cream.</p>
-            <div class="order-btn-row">
-              <button class="btn--order btn--flat accent-text">ORDER NOW</button>
-              <span class="subheading">$10</span>
-            </div>
-          </div>
-        </li>
-        <li class="grid__menu-item card">
-          <img class="img--eggs"/>
-          <div class="product-info">
-            <h3 class="menu-item__title subheading">Mushroom Casserole</h3>
-            <p class="menu-item__subheading body-1">A combination of spinach aand mushrooms.</p>
-            <div class="order-btn-row">
-              <button class="btn--order btn--flat accent-text">ORDER NOW</button>
-              <span class="subheading">$10</span>
-            </div>
-          </div>
-        </li> 
-        <li class="grid__menu-item card">
-          <img class="img--salad"/>
-          <div class="product-info">
-            <h3 class="menu-item__title subheading">Salmon Salad</h3>
-            <p class="menu-item__subheading body-1">Salad topped with a vinaigrette sauce.</p>
-            <div class="order-btn-row">
-              <button class="btn--order btn--flat accent-text">ORDER NOW</button>
-              <span class="subheading">$10</span>
-            </div>
-          </div>
-        </li>
-
-      </ul>
 
       <!-- grid spacer -->
 
@@ -164,76 +105,7 @@
 
       <!-- product grid -->
 
-      <ul class="grid">
-
-        <li class="grid__menu-item card">
-          <img class="img--drip"/>
-          <div class="product-info">
-            <h3 class="menu-item__title subheading">Drip Coffee</h3>
-            <p class="menu-item__subheading body-1">Fresh cup o' joe</p>
-            <div class="order-btn-row">
-              <button class="btn--order btn--flat accent-text">ORDER NOW</button>
-              <span class="subheading">$10</span>
-            </div>
-          </div>
-        </li>
-        <li class="grid__menu-item card">
-          <img class="img--pourover"/>
-          <div class="product-info">
-            <h3 class="menu-item__title subheading">Pour Over</h3>
-            <p class="menu-item__subheading body-1">Individually brewed cups</p>
-            <div class="order-btn-row">
-              <button class="btn--order btn--flat accent-text">ORDER NOW</button>
-              <span class="subheading">$10</span>
-            </div>
-          </div>
-        </li>
-        <li class="grid__menu-item card">
-          <img class="img--cold"/>
-          <div class="product-info">
-            <h3 class="menu-item__title subheading">Cold Brew</h3>
-            <p class="menu-item__subheading body-1">Ice coffee</p>
-            <div class="order-btn-row">
-              <button class="btn--order btn--flat accent-text">ORDER NOW</button>
-              <span class="subheading">$10</span>
-            </div>
-          </div>
-        </li>
-        <li class="grid__menu-item card">
-          <img class="img--latte"/>
-          <div class="product-info">
-            <h3 class="menu-item__title subheading">Latte</h3>
-            <p class="menu-item__subheading body-1">Espresso + steamed milk</p>
-            <div class="order-btn-row">
-              <button class="btn--order btn--flat accent-text">ORDER NOW</button>
-              <span class="subheading">$10</span>
-            </div>
-          </div>
-        </li>
-        <li class="grid__menu-item card">
-          <img class="img--espresso"/>
-          <div class="product-info">
-            <h3 class="menu-item__title subheading">Espresso</h3>
-            <p class="menu-item__subheading body-1">Espresso</p>
-            <div class="order-btn-row">
-              <button class="btn--order btn--flat accent-text">ORDER NOW</button>
-              <span class="subheading">$10</span>
-            </div>
-          </div>
-        </li> 
-        <li class="grid__menu-item card">
-          <img class="img--tea"/>
-          <div class="product-info">
-            <h3 class="menu-item__title subheading">Tea</h3>
-            <p class="menu-item__subheading body-1">A selection of loose leaf teas -hot, iced or latte</p>
-            <div class="order-btn-row">
-              <button class="btn--order btn--flat accent-text">ORDER NOW</button>
-              <span class="subheading">$10</span>
-            </div>
-          </div>
-        </li>
-
-      </ul>
+      <ul class="grid" id="js-drink-grid"></ul>
 
       <!-- grid spacer -->
 
@@ -268,8 +140,206 @@
     </section>
 
   </div>
-  
+
 </div>
+
+
+
+
+
+
+<!-- shopping cart -->
+
+<div class="cart-background is-hidden " id="js-cart-background">
+
+  <!-- dialog card -->
+
+  <div class="cart-dialog bt card">
+  
+    <div class="cart__header">
+      <h1 class="cart__title title">Cart</h1>
+      <button class="btn--icon btn--close" id="js-btn--close">
+        <i class="material-icons dark">close</i>
+      </button>
+    </div>
+  
+    <button class="btn--checkout btn--raised accent primary-text--light js-btn--checkout" onclick="viewShipping()">CHECKOUT</button>
+
+    <ul class="cart-grid" id="js-cart-grid"></ul>
+    
+    <button class="btn--checkout btn--raised accent primary-text--light js-btn--checkout" onclick="viewShipping()">CHECKOUT</button>
+
+
+  </div>
+
+</div>
+
+
+
+
+
+<!-- shipping page -->
+
+<div class="checkout-background is-hidden js-checkout-background">
+
+  <form class="checkout-dialog js-checkout-form" id="js-checkout-form" novalidate>
+
+    <section class="checkout-details card">
+
+      <h1 class="checkout-details__title title">Checkout</h1>
+
+      <a class="body-2 accent-text" href="">Returning guest?</a>
+
+      <!-- contact info -->
+
+      <h2 class="subheading">Contact Info</h2>
+
+      <div class="text-field">
+        <input class="text-field__input text-field--floating-label" type="text" name="email" id="email" required>
+        <label class="text-field__label" for="email">Email</label>
+        <span class="js-input__helper"></span>
+      </div>  
+      <div class="text-field">
+        <input class="text-field__input text-field--floating-label" type="text" name="phone" id="phone" required>
+        <label class="text-field__label" for="phone">Phone number</label>
+        <span class="js-input__helper"></span>
+      </div>  
+
+      <!-- delivery address -->
+
+      <h2 class="subheading">Delivery address</h2>
+
+      <div class="text-field-group">
+
+        <div class="text-field flex-grid-halfs">
+          <input class="text-field__input text-field--floating-label" type="text" name="first" id="first" required>
+          <label class="text-field__label" for="first">First</label>
+          <span class="js-input__helper"></span>
+        </div>
+        <div class="text-field flex-grid-halfs">
+          <input class="text-field__input text-field--floating-label" type="text" name="last" id="last" required>
+          <label class="text-field__label" for="last">Last</label>
+          <span class="js-input__helper"></span>
+        </div>
+        <div class="text-field flex-grid-halfs">
+          <input class="text-field__input text-field--floating-label" type="text" name="address" id="address" required>
+          <label class="text-field__label" for="address">Address</label>
+          <span class="js-input__helper"></span>
+        </div>
+        <div class="text-field flex-grid-halfs">
+          <input class="text-field__input text-field--floating-label" type="text" name="address2" id="address2" required>
+          <label class="text-field__label" for="address2">Address 2</label>
+          <span class="js-input__helper"></span>
+        </div>
+        <div class="text-field flex-grid-thirds">
+          <input class="text-field__input text-field--floating-label" type="text" name="city" id="city" required>
+          <label class="text-field__label" for="city">City</label>
+          <span class="js-input__helper"></span>
+        </div>
+        <div class="text-field flex-grid-thirds">
+          <select class="text-field__input text-field--floating-label" name="state" id="state" required>
+              <option value="" disabled selected hidden></option>
+          </select>
+          <label class="text-field__label" for="state">State</label>
+          <i class="material-icons select_arrow">arrow_drop_down</i>
+          <span class="js-input__helper"></span>
+        </div>
+        <div class="text-field flex-grid-thirds">
+          <input class="text-field__input text-field--floating-label" type="text" name="zip" id="zip" required>
+          <label class="text-field__label" for="zip">Postal code</label>
+          <span class="js-input__helper"></span>
+        </div>
+
+      </div>
+
+      <!-- payment method -->
+
+      <h2 class="subheading">Payment Method</h2>
+
+      <div class="text-field-group">
+
+        <div class="text-field flex-grid-full">
+          <input class="text-field__input text-field--floating-label" type="text" name="name-on-card" id="name-on-card" required>
+          <label class="text-field__label" for="name-on-card">Name on card</label>
+          <span class="js-input__helper"></span>
+        </div>
+        <div class="text-field flex-grid-full">
+          <input class="text-field__input text-field--floating-label" type="text" name="card-number" id="card-number" required>
+          <label class="text-field__label" for="card-number">Card number</label>
+          <span class="js-input__helper"></span>
+        </div>
+        <div class="text-field flex-grid-thirds">
+          <input class="text-field__input text-field--floating-label" type="text" name="month" id="card-month" required>
+          <label class="text-field__label" for="month">MM</label>
+          <span class="js-input__helper"></span>
+        </div>
+        <div class="text-field flex-grid-thirds">
+          <input class="text-field__input text-field--floating-label" type="text" name="year" id="card-year" required>
+          <label class="text-field__label" for="year">YY</label>
+          <span class="js-input__helper"></span>
+        </div>
+        <div class="text-field flex-grid-thirds">
+          <input class="text-field__input text-field--floating-label" type="text" name="cvc" id="card-cvc" required>
+          <label class="text-field__label" for="cvc">CVC</label>
+          <span class="js-input__helper"></span>
+        </div>
+
+      </div>
+
+      <!-- store billing details -->
+
+      <div class="checkout__checkbox checkbox">
+        <input class="checkbox__input" id="billing" type="checkbox" name="billing" value="billing" checked>
+        <label class="checkbox__label" for="billing">Save billing method for next purchase?</label>
+      </div>
+
+      <!-- coupon code -->
+
+      <div class="icon-text-field text-field--coupon">
+        <input class="text-field__input text-field__icon text-field--single js-coupon-codes" type="text" name="promo" placeholder="Add promo code">
+        <i class="material-icons dark">loyalty</i>
+        <span class="js-input__helper"></span>
+      </div>
+
+    </section>
+
+    <!-- order confirm -->
+
+    <section class="order-confirm card">
+
+      <div class="order-confirm__header">
+        <h1 class="order-confirm__title title">Order</h1>
+        <button class="btn--icon btn--shipping--close js-btn--shipping--close" onclick="closeShippingForm()">
+        <i class="material-icons dark">close</i>
+      </div>
+      <ul class="menu body-1 js-order-confirm">
+        <li class="menu__item">
+          <span>Item(s)</span>
+          <span class="js-item-total"></span>
+        </li>
+        <li class="menu__item">
+          <span>Estimated tax</span>
+          <span class="js-estimated-tax"></span>
+        </li>
+        <li class="menu__item">
+          <span>Delivery</span>
+          <span class="js-shipping-cost">$5</span>
+        </li>
+        <li class="menu__item">
+          <span>Estimated total</span>
+          <span class="js-order-total"></span>
+        </li>
+      </ul>
+
+      <button type="submit" form="js-checkout-form" value="submit" class="btn--place-order btn--raised accent primary-text--light">PLACE ORDER</button>
+
+    </section>
+
+  </form>
+
+</div>
+
+
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC89f5W97iiKZFMoi-KuI6beOEf7SMBViQ&callback=initMap" async defer></script>
 
