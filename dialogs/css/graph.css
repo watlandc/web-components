@@ -1,0 +1,135 @@
+:root {
+  font-family: 'Roboto', sans-serif;
+}
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  align-items: center;
+  background-color: #fafafa;
+  min-height: 100%;
+}
+.graph-card {
+  display: flex;
+  background-color: #fff;
+  padding: 40px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
+  margin: 0 auto;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+}
+.horizontal-bar {
+  position: relative;
+  width: 100%;
+  max-width: 660px;
+  align-self: flex-end;
+}
+.horizontal-progress{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 25px;
+  width: 100%;
+}
+.horizontal-progress::-webkit-progress-value {
+  background-color: #8bc34a;
+  border-radius: 2px 0 0 2px;
+}
+.horizontal-progress::-moz-progress-bar {
+  background-color: blue;
+}
+
+.horizontal-progress::-webkit-progress-bar {
+  background-color: rgba(0, 0, 0, .54);
+  border-radius: 2px;
+}
+.percentage {
+  color: rgba(255, 255, 255, 1);
+  font-size: 13px;
+  font-weight: 300;
+}
+.percentage-left {
+  position: absolute;
+  top: 5px;
+  padding-left: 15px;
+}
+.percentage-right {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  padding-right: 15px;
+}
+.vertical-graphs {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.skill-level {
+  display: none;
+  align-self: flex-end;
+  border-bottom: 1px solid rgba(0, 0, 0, .12);
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 850px) {
+  .skill-level {
+    display: block;
+  }
+}
+.skill-level__label {
+  color: rgba(0, 0, 0, .54);
+  padding: 20px 15px 20px 0;;
+  font-size: 13px;
+}
+.data {
+  display: flex;
+}
+.graph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto 60px;
+}
+.graph__title {
+  font-size: 16px;
+  color: rgba(0, 0, 0, .54);
+  padding: 25px 0;
+}
+.graph-item {
+  transform: rotate(-90deg);
+  width: 200px;
+  height: 200px;
+  border-left: 1px solid rgba(0, 0, 0, .12);
+  margin-right: 20px;
+}
+.progress__label {
+  display: block;
+  transform: rotate(135deg) translate(14px, 10px);
+  transform-origin: bottom left;
+  color: rgba(0, 0 ,0, .54);
+  font-size: 13px;
+
+}
+/* style bars */
+.progress__value {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 25px;
+  width: 100%;
+}
+.progress__value::-webkit-progress-value {
+  background-color: #8bc34a;
+  border-radius: 0 2px 2px 0;
+}
+.progress__value::-moz-progress-bar {
+  background-color: blue;
+}
+
+.progress__value::-webkit-progress-bar {
+  background-color: transparent;
+}

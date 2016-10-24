@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Business Card</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/business-card.css">
+  <script src="js/business-card.js" defer></script>
+</head>
+<body>
+  
+<!-- card container -->
+
+<div class="card__container">
+  
+  <!-- input -->
+  
+  <input class="card__input" type="checkbox" name="flip" id="flip" />
+
+  <!-- card -->
+  
+  <label class="card js-card" for="flip">
+  
+    <!-- card front -->
+
+    <div class="figure card-front img--background">
+
+      <h1 class="name">Chris Watland</h1>
+      <i class="icon--rotate material-icons md-light">3d_rotation</i>
+      <h5 class="title">Product Developer at NewCo</h5>
+      <p class="description">Have a great Halloween!</p>
+      <address class="address">
+        <a class="email" href="mailto:email@email.com">email@email.com</a>
+        <a class="website" href="">website.com</a>
+      </address>
+
+      <footer class="footer">
+        <div class="branding">
+          <img class="img--footer"src="//dl.dropboxusercontent.com/s/d1rjyr47i023krn/enc2.png?raw=1" alt="modern-developer" />
+          <div class="footer__about">
+            <p class="footer__name">Chris Watland</p>
+            <p class="footer__source"><span class="footer__via">on</span>Encyclopedia.MD</p>
+          </div>
+        </div>
+        <div class="social-icons">
+          <img class="icon--social icon--facebook" src="//dl.dropboxusercontent.com/s/yg8is02bl7qrxoc/facebook.png?raw=1" alt="facebook" />
+          <img class="icon--social" src="//dl.dropboxusercontent.com/s/vfvpma6bx6g7xu8/github2.png?raw=1" alt="github" />
+          <img class="icon--social" src="//dl.dropboxusercontent.com/s/a58gc23iuufk1g8/linkedin.png?raw=1" alt="linkedin" />
+          <img class="icon--social" src="//dl.dropboxusercontent.com/s/1ky88gge76ijsr8/twitter.png?raw=1" alt="twitter" />
+        </div>
+      </footer>
+
+    </div>
+
+    <!-- card back -->
+
+    <div class="figure card-back img--card-back">
+      
+      <audio class="js-audio">
+        <source src="//dl.dropboxusercontent.com/s/siptxsc6a2dqudv/sound-effect.mp3?raw=1"></source>
+      </audio
+    </div>
+      
+  </label>
+  
+</div>
+
+</body>
+</html>

@@ -54,6 +54,9 @@
   .app-bar {
     height: 64px;
   }
+  .app-bar__spacer {
+    height: 64px;
+  }
 }
 /* display subheading on desktop */
 @media screen and (min-width: 1228px) {
@@ -78,35 +81,31 @@
 	background: none; /* use .search background */
 	height: 48px;
   padding: 16px;
+  font-family: 'Roboto', sans-serif;
 }
-	/* reset input outline on focus */
-	.search-input:focus {
-		outline: none;
-	}
-  /* style search placholder text */
-  .search-input {
-    font-family: 'Roboto', sans-serif;
-  }
-  .search-input::-webkit-input-placeholder {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-  }
-  .search-input::-moz-placeholder {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-  }
-  .search-input:-ms-input-placeholder {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-  }
-  /* disable search cancel button */
-  .search-input::-webkit-search-cancel-button {
-    -webkit-appearance: none;
-  }
-/* raise elevation to 8px on focus */
 .search--focus {
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
   border: none;
+}
+/* reset input outline on focus */
+.search-input:focus {
+  outline: none;
+}
+.search-input::-webkit-input-placeholder {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+.search-input::-moz-placeholder {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+.search-input:-ms-input-placeholder {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+/* disable search cancel button */
+.search-input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
 }
 
 
@@ -122,12 +121,13 @@
 	border-radius: 3px;
 	display: none; /* hide on mobile */
 }
-  .search__icon {
-		display: flex;
-		align-items: center;
-		padding-left: 16px;
-    padding-right: 8px;
-	}
+.search__icon {
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 8px;
+  position: relative;
+}
 
 /* default app bar state hides back button & text */
 .btn--back,
@@ -168,13 +168,11 @@
 .app-bar--search .btn--back {
   display: inline-block;
 }
-/* hide menu button, app title, and subheading when searching */
+/* hide when searching */
 .app-bar--search .btn--menu,
 .app-bar--search .app-bar__title,
 .app-bar--search .app-bar__subheading,
-/* hide search icon in search state on mobile*/
 .app-bar--search .search__icon,
-/* hide .btn--profile, .btn--notification, btn--search, and content */
 .app-bar--search .btn--profile,
 .app-bar--search .btn--notifications,
 .app-bar--search .btn--search,
@@ -245,7 +243,7 @@
 
 
 /*------------------------------------*\
-  #APP-BAR-SEARCH-STATE-COLOR-CHANGE (not using yet)
+  #APP-BAR-SEARCH-STATE-COLOR-CHANGE (not using now)
 \*------------------------------------*/
 
 /* app bar search state color */

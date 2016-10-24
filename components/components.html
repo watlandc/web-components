@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/inputs.css">
   <link rel="stylesheet" href="css/nav-drawer.css">
   <link rel="stylesheet" href="css/selection-controls.css">
+  <link rel="stylesheet" href="css/tabs.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
   <script src="components.js" defer></script>
   <script src="validation.js" defer></script>
@@ -346,10 +347,49 @@
 
 
 
-  <!-- Dialogs -->
+  <!-- TABS -->
 
   <div class="card">
-    <h3 class="headline">Dialogs</h3>
+    <h3 class="headline">TABS</h3>
+
+    <div class="tabs-background">
+  
+      <input class="tab__input" type="radio" name="tabs" id="tab--1" checked />
+      <input class="tab__input" type="radio" name="tabs" id="tab--2" />
+      <input class="tab__input" type="radio" name="tabs" id="tab--3" />
+      <input class="tab__input" type="radio" name="tabs" id="tab--4" />
+      
+      <div class="tab-bar">
+        <nav class="tabs">
+          <label class="tab__label tab--1" for="tab--1">Section 1</label>
+          <label class="tab__label tab--2" for="tab--2">Section 2</label>
+          <label class="tab__label tab--3" for="tab--3">Section 3</label>
+          <label class="tab__label tab--4" for="tab--4">Section 4</label>
+        </nav>
+      </div>
+      
+      <main class="panels">
+        
+        <section class="panel pannel--1">
+          <h1 class="panel-heading">Section 1</h1>
+        </section>
+        
+        <section class="panel pannel--2">
+          <h1 class="panel-heading">Section 2</h1>
+        </section>
+        
+        <section class="panel pannel--3">
+          <h1 class="panel-heading">Section 3</h1>
+        </section>
+        
+        <section class="panel pannel--4">
+          <h1 class="panel-heading">Section 4</h1>
+        </section>
+        
+      </main>
+      
+    </div>
+
   </div>
 
 

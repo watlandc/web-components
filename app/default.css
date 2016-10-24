@@ -15,19 +15,21 @@
   --text-field-error: 12px;
   --font-weight-regular: 400;
   --font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 * {
   box-sizing: border-box;
 }
 body {
-  -webkit-font-smoothing: antialiased;
   position: relative;
   min-width: 300px;
 }
 html,
 body {
   height: 100%;
-  width: 100%;
+  /*width: 100%;*/
+}
+body {
   margin: 0;
 }
 

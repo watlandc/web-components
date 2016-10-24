@@ -1,0 +1,50 @@
+.accordion-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 16px;
+  min-height: 100%;
+}
+.accordion-card {
+  flex: 1;
+  max-width: 900px;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
+}
+.topics {
+  background-color: #fff;
+}
+.topic__input {
+  position: absolute;
+  transform: translateY(-10000px);
+}
+.topic__overview {
+  display: block;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, .12);
+  cursor: pointer;
+}
+.topic__content {
+  display: none;
+  background-color: #fff;
+}
+.topic__input:checked ~ .topic__content {
+  display: block;
+}
+.topic__title {
+  padding: 24px;
+  margin: 0;
+}
+.links {
+  padding: 24px;
+  border-left: 2px solid #8bc34a;
+}
+.link__title {
+  font-size: 14px;
+  color: rgba(0, 0, 0, .54);
+  line-height: 20px;
+}
+.test5 {
+  color: blue;
+}

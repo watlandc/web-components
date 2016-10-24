@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Accordion</title>
+  <link rel="stylesheet" href="../app/default.css">
+  <link rel="stylesheet" href="../app/color-palette.css">
+  <link rel="stylesheet" href="../components/css/accordion.css">
+  <script src="js/accordion.js" defer></script>
+</head>
+<body>
+
+<!-- accordion background -->
+
+<div class="accordion-background">
+
+  <!-- accordion card -->
+
+  <div class="accordion-card js-accordion-card">
+    
+    <template class="js-topic-template">
+    
+      <!-- topic -->
+
+      <div class="topics js-topics">
+
+        <input class="topic__input js-topic__input" type="radio" name="accordion-group" id="topic__id" />
+
+        <!-- topic overview -->
+        
+        <label class="topic__overview js-topic__overview" for="topic__id">
+
+          <div>
+            <h3 class="topic__title js-topic__title">Topic title</h3>
+          </div>
+
+        </label>
+
+        <!-- topic content -->
+
+        <div class="topic__content js-topic__content">
+          
+        </div>
+
+      </div>
+      
+    </template>
+    
+    <!-- link template -->
+    
+    <template class="js-link-template">
+      
+      <div class="links">
+        
+        <p class="link__title js-link__title">Link title</p>
+        
+      </div>
+      
+    </template>
+
+  </div>
+
+</div>
+
+</body>
+</html>
