@@ -17,25 +17,28 @@ $(document).ready(function() {
 });
 
 
+
+
+
+
 /*------------------------------------*\
   #GOOGLE-MAPS-CONFIGURATION
 \*------------------------------------*/
 
 function initMap() {
-  var myLatLng = {lat: 41.910, lng: -87.690}
   
   // Create a map object and specify the DOM element for display.
   var mapDiv = document.getElementById('map');
   var map = new google.maps.Map(mapDiv, {
     scrollwheel: false,
     zoom: 16,
-    center: myLatLng,
+    center: {lat: 41.910, lng: -87.690},
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     fullscreenControl: true
   });
   var marker = new google.maps.Marker({
     map: map,
-    position: myLatLng,
+    position: {lat: 41.910, lng: -87.690},
     title: 'Hello World!'
   });
   // Enable scrollwheel on click
@@ -46,11 +49,7 @@ function initMap() {
   google.maps.event.addListener(map, 'mouseout', function(event) {
     this.setOptions({scrollwheel: false});
   });
-  function CenterControl(controlDiv, map, center) {
-    var control = this;
-  }
 };
-
 
 
 
