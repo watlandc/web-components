@@ -38,7 +38,6 @@ function initMap() {
     position: myLatLng,
     title: 'Hello World!'
   });
-  
   // Enable scrollwheel on click
   google.maps.event.addListener(map, 'click', function(event){
     this.setOptions({scrollwheel:true});
@@ -47,11 +46,6 @@ function initMap() {
   google.maps.event.addListener(map, 'mouseout', function(event) {
     this.setOptions({scrollwheel: false});
   });
-  // Click listener to center map (DEPRECATED)
-  // goCenterUI.addEventListener('click', function() {
-  //   var newCenter = map.getCenter();
-  //   control.setCenter(newCenter);
-  // });
   function CenterControl(controlDiv, map, center) {
     var control = this;
   }
